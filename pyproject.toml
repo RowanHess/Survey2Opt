@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surveyopt"
+version = "0.1.0"
+description = "LLM-assisted survey-to-optimization pipeline"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.0.0",
+    "pydantic>=2.7.0",
+    "jsonschema>=4.22.0",
+    "gurobipy>=11.0.0",
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["surveyopt*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
