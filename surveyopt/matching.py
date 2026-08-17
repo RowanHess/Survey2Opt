@@ -26,7 +26,7 @@ The aggregation function must return one JSON object with exactly these fields:
 Requirements:
 - left_ids and right_ids must contain unique string IDs.
 - weights must provide a finite numeric weight for every left/right pair.
-- The function may leave entities unmatched.
+- The function may leave entities unmatched. If supplying inputs, you should seek to avoid this. Use this option if and only if there is explicit incompatability.
 - Each left entity may match with at most one right entity.
 - Each right entity may match with at most one left entity.
 - Only strictly positive-weight edges are eligible for a match.

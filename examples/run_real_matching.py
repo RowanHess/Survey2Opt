@@ -54,6 +54,7 @@ def main() -> None:
             max_attempts=2,
         ),
         config=PipelineConfig(
+            use_meta_orchestrator=False,
             artifact_root="runs",
             response_sample_size=10,
             agent_workers=8,

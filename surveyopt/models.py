@@ -94,8 +94,40 @@ class OrchestrationPlan(BaseModel):
     assumptions: list[str] = Field(default_factory=list)
 
 
+
+class QuestionAgentPlan(BaseModel):
+    """
+    First orchestration stage.
+
+    Contains only the question-agent task formats: prompts, JSON schemas,
+    and target survey questions. It does not contain aggregation code.
+    """
+
+    question_tasks: list[JsonAgentTask]
+    assumptions: list[str] = Field(default_factory=list)
+    representation_summary: str = ""
+
+
+class AggregationCodePlan(BaseModel):
+    """
+    Second orchestration stage.
+
+    Contains only generated aggregation code. The code receives outputs whose
+    structure is defined by a previously validated QuestionAgentPlan.
+    """
+
+    code: str
+    rationale: str = ""
+
 class AgentOutput(BaseModel):
     task_id: str
+
+    # Stable ID from the QuestionAgentPlan.
+    #
+    # Unlike task_id, this does not include the strategy ID, revision round,
+    # respondent ID, or question ID.
+    source_task_id: str
+
     entity_id: str
     entity_type: str
     question_id: str

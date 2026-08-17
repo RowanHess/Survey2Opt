@@ -15,20 +15,24 @@ from surveyopt.audit import make_auditor_task
 from surveyopt.json_tasks import JsonTaskError, JsonTaskRunner
 from surveyopt.meta_orchestration import make_meta_orchestrator_task
 from surveyopt.models import (
+    AggregationCodePlan,
     AgentOutput,
     AuditResult,
     DecisionGuidance,
     DecisionProblem,
     JsonAgentTask,
     MetaOrchestrationPlan,
-    OrchestrationPlan,
+    QuestionAgentPlan,
     SurveyDefinition,
     SurveyResponse,
     WeightGenerationIdea,
 )
+
 from surveyopt.orchestration import (
-    make_orchestrator_task,
-    validate_plan,
+    make_aggregation_code_task,
+    make_question_format_task,
+    validate_aggregation_code_plan,
+    validate_question_agent_plan,
 )
 
 @dataclass(frozen=True)
@@ -38,18 +42,34 @@ class PipelineConfig:
     response_sample_size: int = 10
     agent_workers: int = 8
 
-    # Number of independent scoring strategies the meta orchestrator proposes.
+    # If True, the meta-orchestrator proposes several independent
+    # weight-generation strategies.
+    #
+    # If False, skip the meta-orchestrator and run one ordinary orchestrator
+    # directly from the survey, response sample, decision documentation,
+    # and user guidance.
+    use_meta_orchestrator: bool = True
+
+    # Used only when use_meta_orchestrator=True.
     meta_idea_count: int = 3
 
     # Initial orchestration plus possible auditor-driven revisions.
     max_revision_rounds: int = 3
+
+    auditor_mode: Literal[
+        "lenient",
+        "balanced",
+        "strict",
+    ] = "lenient"
 
 
 @dataclass
 class AuditRoundResult:
     round_index: int
 
-    plan: OrchestrationPlan | None = None
+    question_agent_plan: QuestionAgentPlan | None = None
+    aggregation_code_plan: AggregationCodePlan | None = None
+
     agent_outputs: list[AgentOutput] = field(default_factory=list)
 
     optimization_input: dict[str, Any] | None = None
@@ -133,6 +153,7 @@ class DecisionPipeline:
                         "max_revision_rounds": (
                             self.config.max_revision_rounds
                         ),
+                        "use_meta_orchestrator": self.config.use_meta_orchestrator,
                     },
                 },
             )
@@ -141,34 +162,22 @@ class DecisionPipeline:
                 : self.config.response_sample_size
             ]
 
-            meta_task = make_meta_orchestrator_task(
+            response_sample = responses[
+                : self.config.response_sample_size
+            ]
+
+            strategies = self._get_weight_generation_strategies(
+                run_directory=run_directory,
                 surveys=surveys,
                 response_sample=response_sample,
                 decision_problem=decision_problem,
                 guidance=guidance,
-                idea_count=self.config.meta_idea_count,
-            )
-
-            meta_result = self.task_runner.run(
-                meta_task,
-                response_model=MetaOrchestrationPlan,
-            )
-
-            meta_plan: MetaOrchestrationPlan = meta_result.value
-
-            self._write_json(
-                run_directory / "meta_orchestrator_output.json",
-                {
-                    "meta_plan": meta_plan.model_dump(mode="json"),
-                    "raw_attempts": meta_result.raw_attempts,
-                    "llm_metadata": meta_result.metadata,
-                },
             )
 
             candidates: list[CandidateRunResult] = []
 
             for strategy_index, strategy in enumerate(
-                meta_plan.ideas,
+                strategies,
                 start=1,
             ):
                 candidate_directory = (
@@ -255,6 +264,86 @@ class DecisionPipeline:
                 self._failure_payload(exc),
             )
             raise
+    def _get_weight_generation_strategies(
+        self,
+        *,
+        run_directory: Path,
+        surveys: list[SurveyDefinition],
+        response_sample: list[SurveyResponse],
+        decision_problem: DecisionProblem,
+        guidance: DecisionGuidance,
+    ) -> list[WeightGenerationIdea]:
+        """
+        Return the strategies that will be passed to ordinary orchestrators.
+
+        When use_meta_orchestrator=False, no meta-orchestrator LLM call occurs.
+        Instead, one deterministic direct-orchestration strategy is used.
+        """
+
+        if not self.config.use_meta_orchestrator:
+            direct_strategy = WeightGenerationIdea(
+                id="direct_orchestration",
+                title="Direct orchestration",
+                instructions_for_orchestrator=(
+                    "Independently design an appropriate procedure for converting "
+                    "survey responses into the numerical optimization inputs "
+                    "required by the documented decision function. Use the "
+                    "decision-maker's prompt, surveys, and response sample "
+                    "directly. Choose useful intermediate JSON representations "
+                    "for question agents and implement the resulting scoring "
+                    "logic in generated aggregation code."
+                ),
+                scoring_rationale=(
+                    "No separate meta-orchestration strategy is imposed. "
+                    "The orchestrator should derive a reasonable scoring "
+                    "procedure directly from the supplied problem context."
+                ),
+                risks_to_check=[
+                    "Do not infer unsupported preferences or attributes.",
+                    "Respect explicit exclusions and dealbreakers.",
+                    "Ensure generated aggregation code returns the exact input "
+                    "format documented for the deterministic decision function.",
+                ],
+            )
+
+            self._write_json(
+                run_directory / "direct_orchestration_strategy.json",
+                {
+                    "meta_orchestrator_used": False,
+                    "strategy": direct_strategy.model_dump(mode="json"),
+                },
+            )
+
+            return [direct_strategy]
+
+        meta_task = make_meta_orchestrator_task(
+            surveys=surveys,
+            response_sample=response_sample,
+            decision_problem=decision_problem,
+            guidance=guidance,
+            idea_count=self.config.meta_idea_count,
+        )
+
+        meta_result = self.task_runner.run(
+            meta_task,
+            response_model=MetaOrchestrationPlan,
+        )
+
+        meta_plan: MetaOrchestrationPlan = meta_result.value
+
+        self._write_json(
+            run_directory / "meta_orchestrator_output.json",
+            {
+                "meta_orchestrator_used": True,
+                "meta_plan": meta_plan.model_dump(mode="json"),
+                "raw_attempts": meta_result.raw_attempts,
+                "llm_metadata": meta_result.metadata,
+            },
+        )
+
+        return meta_plan.ideas
+
+
 
     def _run_candidate(
         self,
@@ -280,7 +369,8 @@ class DecisionPipeline:
             rounds=[],
         )
 
-        prior_plan: OrchestrationPlan | None = None
+        prior_question_agent_plan: QuestionAgentPlan | None = None
+        prior_aggregation_code_plan: AggregationCodePlan | None = None
         revision_feedback: str | None = None
 
         for round_index in range(
@@ -292,53 +382,99 @@ class DecisionPipeline:
             )
             round_directory.mkdir(parents=True, exist_ok=True)
 
-            plan: OrchestrationPlan | None = None
+            question_agent_plan: QuestionAgentPlan | None = None
+            aggregation_code_plan: AggregationCodePlan | None = None
             agent_outputs: list[AgentOutput] = []
             optimization_input: dict[str, Any] | None = None
             decision: dict[str, Any] | None = None
 
             try:
-                orchestrator_task = make_orchestrator_task(
+                # ---------------------------------------------------------------
+                # Stage 1: Question-agent formats, prompts, and output schemas.
+                # ---------------------------------------------------------------
+
+                question_format_task = make_question_format_task(
                     surveys=surveys,
                     response_sample=response_sample,
                     decision_problem=decision_problem,
                     guidance=guidance,
                     weight_generation_idea=strategy,
                     task_id=(
-                        f"orchestrator__{strategy.id}"
+                        f"question_format_orchestrator__{strategy.id}"
                         f"__round_{round_index}"
                     ),
                     revision_feedback=revision_feedback,
-                    previous_plan=prior_plan,
+                    previous_question_plan=prior_question_agent_plan,
                 )
 
-                orchestration_result = self.task_runner.run(
-                    orchestrator_task,
-                    response_model=OrchestrationPlan,
-                    result_validator=validate_plan,
+                question_format_result = self.task_runner.run(
+                    question_format_task,
+                    response_model=QuestionAgentPlan,
+                    result_validator=lambda plan: validate_question_agent_plan(
+                        plan,
+                        surveys,
+                    ),
                 )
 
-                plan = orchestration_result.value
-
+                question_agent_plan = question_format_result.value
 
                 self._write_json(
-                    round_directory / "orchestrator_output.json",
+                    round_directory / "question_agent_plan_output.json",
                     {
-                        "plan": plan.model_dump(mode="json"),
-                        "raw_attempts": orchestration_result.raw_attempts,
-                        "llm_metadata": orchestration_result.metadata,
+                        "question_agent_plan": question_agent_plan.model_dump(
+                            mode="json"
+                        ),
+                        "raw_attempts": question_format_result.raw_attempts,
+                        "llm_metadata": question_format_result.metadata,
                     },
                 )
 
-                (
-                    round_directory / "aggregation_code.py"
-                ).write_text(
-                    plan.aggregation.code,
+                # ---------------------------------------------------------------
+                # Stage 2: Aggregation code. It receives the validated output
+                # contract from Stage 1.
+                # ---------------------------------------------------------------
+
+                aggregation_code_task = make_aggregation_code_task(
+                    surveys=surveys,
+                    response_sample=response_sample,
+                    decision_problem=decision_problem,
+                    guidance=guidance,
+                    weight_generation_idea=strategy,
+                    question_agent_plan=question_agent_plan,
+                    task_id=(
+                        f"aggregation_code_orchestrator__{strategy.id}"
+                        f"__round_{round_index}"
+                    ),
+                    revision_feedback=revision_feedback,
+                    previous_aggregation_plan=prior_aggregation_code_plan,
+                )
+
+                aggregation_code_result = self.task_runner.run(
+                    aggregation_code_task,
+                    response_model=AggregationCodePlan,
+                    result_validator=validate_aggregation_code_plan,
+                )
+
+                aggregation_code_plan = aggregation_code_result.value
+
+                self._write_json(
+                    round_directory / "aggregation_code_output.json",
+                    {
+                        "aggregation_code_plan": aggregation_code_plan.model_dump(
+                            mode="json"
+                        ),
+                        "raw_attempts": aggregation_code_result.raw_attempts,
+                        "llm_metadata": aggregation_code_result.metadata,
+                    },
+                )
+
+                (round_directory / "aggregation_code.py").write_text(
+                    aggregation_code_plan.code,
                     encoding="utf-8",
                 )
 
                 runtime_tasks = self._expand_question_tasks(
-                    plan=plan,
+                    question_agent_plan=question_agent_plan,
                     surveys=surveys,
                     responses=responses,
                     task_namespace=(
@@ -352,18 +488,24 @@ class DecisionPipeline:
                 )
 
                 aggregation_inputs = [
-                    {
-                        "task_id": output.task_id,
-                        "entity_id": output.entity_id,
-                        "entity_type": output.entity_type,
-                        "question_id": output.question_id,
-                        "output": output.output,
-                    }
-                    for output in agent_outputs
-                ]
+                {
+                    # Unique runtime invocation ID.
+                    "task_id": output.task_id,
+
+                    # Stable task ID from the QuestionAgentPlan.
+                    "source_task_id": output.source_task_id,
+
+                    "entity_id": output.entity_id,
+                    "entity_type": output.entity_type,
+                    "question_id": output.question_id,
+                    "output": output.output,
+                }
+                for output in agent_outputs
+            ]
+
 
                 optimization_input = execute_generated_aggregation(
-                    source=plan.aggregation.code,
+                    source=aggregation_code_plan.code,
                     question_outputs=aggregation_inputs,
                     survey=[
                         survey.model_dump(mode="json")
@@ -406,10 +548,12 @@ class DecisionPipeline:
                     decision_problem=decision_problem,
                     guidance=guidance,
                     strategy=strategy,
-                    plan=plan,
+                    question_agent_plan=question_agent_plan,
+                    aggregation_code_plan=aggregation_code_plan,
                     agent_outputs=agent_outputs,
                     optimization_input=optimization_input,
                     decision=decision,
+                    audit_mode=self.config.auditor_mode,
                 )
 
                 audit_task_result = self.task_runner.run(
@@ -430,7 +574,8 @@ class DecisionPipeline:
 
                 round_result = AuditRoundResult(
                     round_index=round_index,
-                    plan=plan,
+                    question_agent_plan=question_agent_plan,
+                    aggregation_code_plan=aggregation_code_plan,
                     agent_outputs=agent_outputs,
                     optimization_input=optimization_input,
                     decision=decision,
@@ -456,7 +601,8 @@ class DecisionPipeline:
 
                 # This feedback is fed into the next orchestration call.
                 revision_feedback = audit.feedback_to_orchestrator
-                prior_plan = plan
+                prior_question_agent_plan = question_agent_plan
+                prior_aggregation_code_plan = aggregation_code_plan
 
             except Exception as exc:
                 self._write_json(
@@ -467,7 +613,8 @@ class DecisionPipeline:
                 candidate.rounds.append(
                     AuditRoundResult(
                         round_index=round_index,
-                        plan=plan,
+                        question_agent_plan=question_agent_plan,
+                        aggregation_code_plan=aggregation_code_plan,
                         agent_outputs=agent_outputs,
                         optimization_input=optimization_input,
                         decision=decision,
@@ -485,7 +632,8 @@ class DecisionPipeline:
                     f"Technical error: {type(exc).__name__}: {exc}"
                 )
 
-                prior_plan = plan
+                prior_question_agent_plan = question_agent_plan
+                prior_aggregation_code_plan = aggregation_code_plan
 
         self._write_json(
             candidate_directory / "candidate_summary.json",
@@ -520,6 +668,7 @@ class DecisionPipeline:
 
                 output = AgentOutput(
                     task_id=task.task_id,
+                    source_task_id=payload["source_task_id"],
                     entity_id=payload["entity"]["id"],
                     entity_type=payload["entity"]["type"],
                     question_id=payload["question"]["id"],
@@ -567,7 +716,7 @@ class DecisionPipeline:
     def _expand_question_tasks(
         self,
         *,
-        plan: OrchestrationPlan,
+        question_agent_plan: QuestionAgentPlan,
         surveys: list[SurveyDefinition],
         responses: list[SurveyResponse],
         task_namespace: str,
@@ -579,7 +728,7 @@ class DecisionPipeline:
 
         runtime_tasks: list[JsonAgentTask] = []
 
-        for plan_task in plan.question_tasks:
+        for plan_task in question_agent_plan.question_tasks:
             for response in responses:
                 if response.entity_type != plan_task.target_entity_type:
                     continue
@@ -609,6 +758,8 @@ class DecisionPipeline:
                 )
 
                 input_payload = {
+                    "source_task_id": plan_task.task_id,
+
                     "entity": {
                         "id": response.entity_id,
                         "type": response.entity_type,
@@ -620,6 +771,7 @@ class DecisionPipeline:
                     "question": question.model_dump(mode="json"),
                     "answer": response.answers[question.id],
                 }
+
 
                 runtime_tasks.append(
                     plan_task.model_copy(
@@ -633,8 +785,14 @@ class DecisionPipeline:
         return runtime_tasks
 
     def _validate_config(self) -> None:
-        if self.config.meta_idea_count < 1:
-            raise ValueError("meta_idea_count must be at least 1.")
+        if (
+            self.config.use_meta_orchestrator
+            and self.config.meta_idea_count < 1
+        ):
+            raise ValueError(
+                "meta_idea_count must be at least 1 when "
+                "use_meta_orchestrator=True."
+            )
 
         if self.config.max_revision_rounds < 1:
             raise ValueError(

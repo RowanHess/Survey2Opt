@@ -3,16 +3,18 @@ from __future__ import annotations
 from typing import Any
 
 from .models import (
+    AggregationCodePlan,
     AgentOutput,
     AuditResult,
     DecisionGuidance,
     DecisionProblem,
     JsonAgentTask,
-    OrchestrationPlan,
+    QuestionAgentPlan,
     SurveyDefinition,
     SurveyResponse,
     WeightGenerationIdea,
 )
+
 
 
 AUDITOR_SYSTEM_PROMPT = """
@@ -24,6 +26,8 @@ perfect, uniquely optimal, or universally preferable decision.
 A decision is APPROVED when:
 - it is consistent with the supplied optimization input;
 - it does not clearly contradict explicit survey answers;
+    - Be lenient in terms of what is a (potentially strongly stated) preference and what is completely impossible when evaluating this.
+    Preferences should affect scores but be allowed be violated; impossibilities should never be violated.
 - it does not clearly violate an explicit decision-maker requirement;
 - there is no direct evidence of a material aggregation, scoring, or solver
   failure.
@@ -42,11 +46,11 @@ Reject only when there is a concrete, decision-relevant blocker supported by
 the supplied evidence. Examples of blockers include:
 
 1. An explicit hard exclusion or dealbreaker is directly violated.
-2. The aggregation logic has a demonstrable error that materially changes
-   the decision.
+2. The result is non-sensical.
 3. A match relies on a clearly unsupported inference that is likely wrong and that materially affects
    the selected result.
 4. A systematic scoring failure affects the primary selected matches.
+5. The reult directly violates the user's inputted desires.
 
 Do NOT reject merely because:
 - a survey response is ambiguous or incomplete;
@@ -58,6 +62,7 @@ Do NOT reject merely because:
   objective;
 - you cannot prove that every possible alternative was considered;
 - you can imagine a possible concern without direct evidence.
+- you do not think that the result is consistent with the aggregation logic.
 
 For every rejection:
 - include at least one issue with severity `critical` or `major`;
@@ -78,10 +83,12 @@ def make_auditor_task(
     decision_problem: DecisionProblem,
     guidance: DecisionGuidance,
     strategy: WeightGenerationIdea,
-    plan: OrchestrationPlan,
+    question_agent_plan: QuestionAgentPlan,
+    aggregation_code_plan: AggregationCodePlan,
     agent_outputs: list[AgentOutput],
     optimization_input: dict[str, Any],
     decision: dict[str, Any],
+    audit_mode: Literal["lenient", "balanced", "strict"] = "lenient",
 ) -> JsonAgentTask:
     compact_agent_outputs: list[dict[str, Any]] = [
         {
@@ -115,7 +122,8 @@ def make_auditor_task(
                 response.model_dump(mode="json")
                 for response in responses
             ],
-            "orchestration_plan": plan.model_dump(mode="json"),
+            "question_agent_plan": question_agent_plan.model_dump(mode="json"),
+            "aggregation_code_plan": aggregation_code_plan.model_dump(mode="json"),
             #"question_agent_outputs": compact_agent_outputs,
             #"optimization_input": optimization_input,
             "solver_decision": decision,
