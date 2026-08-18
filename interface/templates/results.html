@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matching Results</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="page-shell results-page">
+      <header class="header results-header">
+        <div>
+          <p class="eyebrow">Your getaway matches</p>
+          <h1>Best-fit vacation stays</h1>
+        </div>
+        <a class="secondary-link" href="/">Back to search</a>
+      </header>
+
+      {% if errors %}
+      <div class="error-box">
+        {% for error in errors %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div id="map" class="map"></div>
+
+      <section class="panel results-panel">
+        <div class="results-grid">
+          {% for item in matched_houses %}
+          <article class="result-card">
+            <div class="result-header">
+              <h2>{{ item.user.name }}</h2>
+              {% if item.house %}
+              <span class="match-tag">Matched</span>
+              {% else %}
+              <span class="no-match-tag">No match</span>
+              {% endif %}
+            </div>
+
+            {%- if item.house %}
+            <div class="property-box">
+              {% if item.house.image_url %}
+              <img class="property-image" src="{{ item.house.image_url }}" alt="{{ item.house.listing_name }}" />
+              {% endif %}
+              <h3>{{ item.house.listing_name }}, {{ item.house.city }}, {{ item.house.state }}</h3>
+              <p class="meta-line">${{ "{:,.0f}".format(item.house.price) }} · {{ item.house.bedrooms }} bd / {{ item.house.bathrooms }} ba / {{ item.house.sqft }} sq ft</p>
+              <p>{{ item.house.description }}</p>
+              <ul class="detail-list">
+                {% set feature_list = item.house.features if item.house.features is defined else item.house.tags %}
+                {% for tag in feature_list %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% else %}
+            <p>{{ item.reason }}</p>
+            {% endif %}
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      {% if run_id %}
+      <section class="panel artifacts-panel">
+        <h2>Run artifacts</h2>
+        <p>
+          Latest pipeline run: <strong>{{ run_id }}</strong><br />
+          <a href="{{ run_summary_url }}" target="_blank" rel="noreferrer">Open run summary JSON</a>
+        </p>
+        <div class="artifact-links">
+          {% if artifacts.get('question_agent_plan') %}
+          <a href="{{ artifacts['question_agent_plan'] }}" target="_blank" rel="noreferrer">Question-level agent outputs</a>
+          {% endif %}
+          {% if artifacts.get('aggregation_code') %}
+          <a href="{{ artifacts['aggregation_code'] }}" target="_blank" rel="noreferrer">Aggregation code</a>
+          {% endif %}
+          {% if artifacts.get('aggregation_output') %}
+          <a href="{{ artifacts['aggregation_output'] }}" target="_blank" rel="noreferrer">Aggregation code output</a>
+          {% endif %}
+          {% if artifacts.get('agent_outputs') %}
+          <a href="{{ artifacts['agent_outputs'] }}" target="_blank" rel="noreferrer">Agent output JSON files</a>
+          {% endif %}
+        </div>
+        <p>
+          Raw artifacts live under the local <code>interface/runs</code> folder and can be browsed from the server’s run-directory view.
+        </p>
+      </section>
+      {% endif %}
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+      const houseData = {{ houses | tojson }};
+      const matchedHouses = {{ matched_houses | tojson }};
+      const map = L.map('map').setView([36.8, -119.4], 5);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      const activeHouseIds = new Set(
+        matchedHouses
+          .filter(item => item.house)
+          .map(item => item.house.id)
+      );
+
+      houseData.forEach((house) => {
+        const marker = L.marker([house.lat, house.lng]).addTo(map);
+        const isMatched = activeHouseIds.has(house.id);
+
+        const label = [
+          `<strong>${house.listing_name}</strong>`,
+          `<div>${house.city}, ${house.state}</div>`,
+          `<div>${house.bedrooms} bd / ${house.bathrooms} ba</div>`,
+          `<div>$${Number(house.price).toLocaleString()}</div>`,
+          isMatched ? '<div><em>Matched household</em></div>' : '<div>Available listing</div>'
+        ].join('');
+
+        marker.bindPopup(label);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>House Match UI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Vacation search</p>
+          <h1>Find the perfect stay for every traveler</h1>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel inventory-panel">
+          <h2>Available homes</h2>
+          <div class="inventory-grid">
+            {% for house in houses %}
+            <article class="inventory-card">
+              <div class="inventory-header">
+                <span class="tag">{{ house.city }}</span>
+                <strong>${{ "{:,.0f}".format(house.price) }}</strong>
+              </div>
+              <h3>{{ house.listing_name }}</h3>
+              {% if house.image_url %}
+              <img class="inventory-image" src="{{ house.image_url }}" alt="{{ house.listing_name }}" />
+              {% endif %}
+              <p>{{ house.bedrooms }} bd / {{ house.bathrooms }} ba / {{ house.sqft }} sq ft</p>
+              <ul>
+                {% set feature_list = house.features if house.features is defined else house.tags %}
+                {% for tag in feature_list %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+              </ul>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section class="panel form-panel">
+          <h2>Household preferences</h2>
+          <form action="/match" method="post" id="match-form">
+            <div class="user-list">
+              {% for user in default_users %}
+              <div class="user-card">
+                <label>
+                  <span>Name</span>
+                  <input type="text" name="user_{{ loop.index0 }}_name" value="{{ user.name }}" />
+                </label>
+                <label>
+                  <span>What matters most in a home?</span>
+                  <textarea name="user_{{ loop.index0 }}_preferences" rows="4">{{ user.preferences }}</textarea>
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="prompt-box">
+              <label for="user_prompt">Matching prompt</label>
+              <textarea id="user_prompt" name="user_prompt" rows="4">{{ default_user_prompt }}</textarea>
+            </div>
+
+            <p class="env-note">This app requires either <code>PARLEY_API_KEY</code> or <code>OPENAI_API_KEY</code> to be set in the terminal before matching runs.</p>
+
+            <div class="actions-row">
+              <button type="button" class="secondary-button" id="add-user">Add another household</button>
+              <button type="submit" class="primary-button">Match households to homes</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay hidden" aria-live="polite">
+      <div class="loading-panel">
+        <div class="spinner"></div>
+        <h2>Running the match</h2>
+        <p id="loading-status">Preparing the household survey...</p>
+        <ul class="loading-steps">
+          <li class="active">Collecting preference data</li>
+          <li>Running the matching pipeline</li>
+          <li>Auditing the generated matches</li>
+          <li>Rendering the results</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const maxUsers = 5;
+      const userList = document.querySelector('.user-list');
+      const addButton = document.getElementById('add-user');
+      const form = document.getElementById('match-form');
+      const loadingOverlay = document.getElementById('loading-overlay');
+      const loadingStatus = document.getElementById('loading-status');
+      const stageMessages = [
+        'Preparing the household survey...',
+        'Running the matching pipeline...',
+        'Auditing the generated matches...',
+        'Rendering the final home assignments...'
+      ];
+      let currentUserCount = document.querySelectorAll('.user-card').length;
+
+      form.addEventListener('submit', () => {
+        loadingOverlay.classList.remove('hidden');
+        let stepIndex = 0;
+        const interval = setInterval(() => {
+          stepIndex += 1;
+          if (stepIndex < stageMessages.length) {
+            loadingStatus.textContent = stageMessages[stepIndex];
+          } else {
+            loadingStatus.textContent = 'Finalizing the results...';
+          }
+        }, 1800);
+
+        setTimeout(() => {
+          clearInterval(interval);
+          loadingStatus.textContent = 'Finalizing the results...';
+        }, 5200);
+      });
+
+      addButton.addEventListener('click', () => {
+        if (currentUserCount >= maxUsers) {
+          return;
+        }
+
+        const userCard = document.createElement('div');
+        userCard.className = 'user-card';
+        userCard.innerHTML = `
+          <label>
+            <span>Name</span>
+            <input type="text" name="user_${currentUserCount}_name" placeholder="Household ${currentUserCount + 1}" />
+          </label>
+          <label>
+            <span>What matters most in a home?</span>
+            <textarea name="user_${currentUserCount}_preferences" rows="4" placeholder="Tell us about your must-haves, ideal layout, neighborhood, and dealbreakers."></textarea>
+          </label>
+        `;
+
+        userList.appendChild(userCard);
+        currentUserCount += 1;
+      });
+    </script>
+  </body>
+</html>

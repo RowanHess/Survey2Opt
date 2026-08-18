@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Run directory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Run artifacts</p>
+          <h1>{{ directory_name }}</h1>
+        </div>
+        <a class="secondary-link" href="/">Back to survey</a>
+      </header>
+
+      <section class="panel">
+        {% if is_root %}
+        <p>Available matching runs:</p>
+        {% else %}
+        <p>Files in this run directory:</p>
+        {% endif %}
+        <ul class="artifact-directory">
+          {% for entry in entries %}
+          <li>
+            {% if entry.is_dir %}
+            <a href="{{ entry.path }}">📁 {{ entry.name }}</a>
+            {% else %}
+            <a href="{{ entry.path }}" target="_blank" rel="noreferrer">📄 {{ entry.name }}</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
