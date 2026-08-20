@@ -1,0 +1,1531 @@
+{
+  "seed": 20260418,
+  "houses": [
+    {
+      "house_id": "house_01",
+      "location": {
+        "city": "Cambridge",
+        "zipcode": "02138",
+        "neighborhood": "Harvard Square",
+        "urbanicity": 0.87,
+        "walkability": 0.891,
+        "transit_access": 0.926,
+        "car_dependence": 0.202,
+        "noise": 0.648,
+        "privacy": 0.445,
+        "miles_to_downtown_boston": 2.72
+      },
+      "cost": {
+        "list_price_usd": 873771,
+        "monthly_cost_usd": 5107
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 1,
+        "bathrooms": 1.0,
+        "sqft": 1349,
+        "parking_spots": 0,
+        "outdoor_space": 0.265,
+        "accessibility": 0.634,
+        "has_office_room": false,
+        "year_built_band": "pre_1940"
+      },
+      "condition": {
+        "renovation_need": 0.661,
+        "maintenance_burden": 0.453,
+        "internet_quality": 0.905
+      },
+      "amenities": {
+        "grocery_minutes": 5.7,
+        "healthcare_minutes": 13.2,
+        "school_quality": 0.591,
+        "parks_minutes": 7.2,
+        "culture_minutes": 13.6
+      },
+      "climate": {
+        "snow_exposure": 0.606,
+        "flood_risk": 0.271,
+        "nature_access": 0.353
+      },
+      "community": {
+        "diversity": 0.88,
+        "newcomer_friendliness": 0.354,
+        "family_orientation": 0.46
+      },
+      "jobs": {
+        "remote_work_suitability": 0.721,
+        "local_job_density": 0.799,
+        "industry_tags": [
+          "finance",
+          "healthcare",
+          "hospitality",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_02",
+      "location": {
+        "city": "Boston",
+        "zipcode": "02130",
+        "neighborhood": "Jamaica Plain",
+        "urbanicity": 0.78,
+        "walkability": 0.81,
+        "transit_access": 0.773,
+        "car_dependence": 0.379,
+        "noise": 0.417,
+        "privacy": 0.585,
+        "miles_to_downtown_boston": 5.63
+      },
+      "cost": {
+        "list_price_usd": 1164333,
+        "monthly_cost_usd": 6889
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 3,
+        "bathrooms": 1.5,
+        "sqft": 1121,
+        "parking_spots": 1,
+        "outdoor_space": 0.025,
+        "accessibility": 0.615,
+        "has_office_room": false,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.489,
+        "maintenance_burden": 0.766,
+        "internet_quality": 0.744
+      },
+      "amenities": {
+        "grocery_minutes": 12.6,
+        "healthcare_minutes": 14.2,
+        "school_quality": 0.331,
+        "parks_minutes": 13.0,
+        "culture_minutes": 5
+      },
+      "climate": {
+        "snow_exposure": 0.487,
+        "flood_risk": 0.179,
+        "nature_access": 0.293
+      },
+      "community": {
+        "diversity": 0.726,
+        "newcomer_friendliness": 0.879,
+        "family_orientation": 0.52
+      },
+      "jobs": {
+        "remote_work_suitability": 0.694,
+        "local_job_density": 0.852,
+        "industry_tags": [
+          "government",
+          "hospitality",
+          "logistics",
+          "trades"
+        ]
+      }
+    },
+    {
+      "house_id": "house_03",
+      "location": {
+        "city": "Malden",
+        "zipcode": "02148",
+        "neighborhood": "Malden Center",
+        "urbanicity": 0.663,
+        "walkability": 0.544,
+        "transit_access": 0.826,
+        "car_dependence": 0.545,
+        "noise": 0.406,
+        "privacy": 0.578,
+        "miles_to_downtown_boston": 7.7
+      },
+      "cost": {
+        "list_price_usd": 761664,
+        "monthly_cost_usd": 4686
+      },
+      "structure": {
+        "property_type": "single_family",
+        "bedrooms": 3,
+        "bathrooms": 2.5,
+        "sqft": 2195,
+        "parking_spots": 2,
+        "outdoor_space": 0.541,
+        "accessibility": 0.656,
+        "has_office_room": false,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.631,
+        "maintenance_burden": 0.475,
+        "internet_quality": 0.868
+      },
+      "amenities": {
+        "grocery_minutes": 14.0,
+        "healthcare_minutes": 9.2,
+        "school_quality": 0.819,
+        "parks_minutes": 11.0,
+        "culture_minutes": 18.6
+      },
+      "climate": {
+        "snow_exposure": 0.613,
+        "flood_risk": 0.308,
+        "nature_access": 0.396
+      },
+      "community": {
+        "diversity": 0.559,
+        "newcomer_friendliness": 0.502,
+        "family_orientation": 0.72
+      },
+      "jobs": {
+        "remote_work_suitability": 0.831,
+        "local_job_density": 0.784,
+        "industry_tags": [
+          "biotech",
+          "education",
+          "hospitality",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_04",
+      "location": {
+        "city": "Lexington",
+        "zipcode": "02421",
+        "neighborhood": "Lexington Center",
+        "urbanicity": 0.396,
+        "walkability": 0.509,
+        "transit_access": 0.201,
+        "car_dependence": 0.828,
+        "noise": 0.178,
+        "privacy": 0.801,
+        "miles_to_downtown_boston": 12.31
+      },
+      "cost": {
+        "list_price_usd": 1033574,
+        "monthly_cost_usd": 6180
+      },
+      "structure": {
+        "property_type": "townhouse",
+        "bedrooms": 2,
+        "bathrooms": 1.5,
+        "sqft": 1338,
+        "parking_spots": 1,
+        "outdoor_space": 0.694,
+        "accessibility": 0.158,
+        "has_office_room": false,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.457,
+        "maintenance_burden": 0.776,
+        "internet_quality": 0.711
+      },
+      "amenities": {
+        "grocery_minutes": 11.2,
+        "healthcare_minutes": 14.8,
+        "school_quality": 0.711,
+        "parks_minutes": 10.6,
+        "culture_minutes": 19.7
+      },
+      "climate": {
+        "snow_exposure": 0.575,
+        "flood_risk": 0.249,
+        "nature_access": 0.676
+      },
+      "community": {
+        "diversity": 0.463,
+        "newcomer_friendliness": 0.869,
+        "family_orientation": 0.84
+      },
+      "jobs": {
+        "remote_work_suitability": 0.594,
+        "local_job_density": 0.645,
+        "industry_tags": [
+          "biotech",
+          "trades"
+        ]
+      }
+    },
+    {
+      "house_id": "house_05",
+      "location": {
+        "city": "Salem",
+        "zipcode": "01970",
+        "neighborhood": "Salem",
+        "urbanicity": 0.671,
+        "walkability": 0.74,
+        "transit_access": 0.435,
+        "car_dependence": 0.637,
+        "noise": 0.393,
+        "privacy": 0.617,
+        "miles_to_downtown_boston": 15.86
+      },
+      "cost": {
+        "list_price_usd": 1036246,
+        "monthly_cost_usd": 6351
+      },
+      "structure": {
+        "property_type": "townhouse",
+        "bedrooms": 4,
+        "bathrooms": 3.0,
+        "sqft": 2168,
+        "parking_spots": 1,
+        "outdoor_space": 0.455,
+        "accessibility": 0.238,
+        "has_office_room": true,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.45,
+        "maintenance_burden": 0.226,
+        "internet_quality": 0.783
+      },
+      "amenities": {
+        "grocery_minutes": 10.8,
+        "healthcare_minutes": 14.2,
+        "school_quality": 0.579,
+        "parks_minutes": 4.8,
+        "culture_minutes": 14.2
+      },
+      "climate": {
+        "snow_exposure": 0.6,
+        "flood_risk": 0.291,
+        "nature_access": 0.48
+      },
+      "community": {
+        "diversity": 0.616,
+        "newcomer_friendliness": 0.609,
+        "family_orientation": 0.74
+      },
+      "jobs": {
+        "remote_work_suitability": 0.697,
+        "local_job_density": 0.536,
+        "industry_tags": [
+          "hospitality",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_06",
+      "location": {
+        "city": "Cambridge",
+        "zipcode": "02139",
+        "neighborhood": "Central Square",
+        "urbanicity": 0.897,
+        "walkability": 0.869,
+        "transit_access": 0.905,
+        "car_dependence": 0.25,
+        "noise": 0.689,
+        "privacy": 0.378,
+        "miles_to_downtown_boston": 3.63
+      },
+      "cost": {
+        "list_price_usd": 898015,
+        "monthly_cost_usd": 5259
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 1,
+        "bathrooms": 1.5,
+        "sqft": 838,
+        "parking_spots": 0,
+        "outdoor_space": 0.297,
+        "accessibility": 0.687,
+        "has_office_room": false,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.812,
+        "maintenance_burden": 0.798,
+        "internet_quality": 0.908
+      },
+      "amenities": {
+        "grocery_minutes": 4.3,
+        "healthcare_minutes": 20.9,
+        "school_quality": 0.459,
+        "parks_minutes": 7.0,
+        "culture_minutes": 15.7
+      },
+      "climate": {
+        "snow_exposure": 0.471,
+        "flood_risk": 0.166,
+        "nature_access": 0.285
+      },
+      "community": {
+        "diversity": 0.844,
+        "newcomer_friendliness": 0.756,
+        "family_orientation": 0.44
+      },
+      "jobs": {
+        "remote_work_suitability": 0.739,
+        "local_job_density": 0.853,
+        "industry_tags": [
+          "finance",
+          "logistics",
+          "tech",
+          "trades"
+        ]
+      }
+    },
+    {
+      "house_id": "house_07",
+      "location": {
+        "city": "Weymouth",
+        "zipcode": "02188",
+        "neighborhood": "Weymouth Landing",
+        "urbanicity": 0.427,
+        "walkability": 0.409,
+        "transit_access": 0.472,
+        "car_dependence": 0.813,
+        "noise": 0.251,
+        "privacy": 0.684,
+        "miles_to_downtown_boston": 13.98
+      },
+      "cost": {
+        "list_price_usd": 1055359,
+        "monthly_cost_usd": 6161
+      },
+      "structure": {
+        "property_type": "single_family",
+        "bedrooms": 2,
+        "bathrooms": 1.5,
+        "sqft": 2323,
+        "parking_spots": 2,
+        "outdoor_space": 0.744,
+        "accessibility": 0.331,
+        "has_office_room": false,
+        "year_built_band": "1980_1999"
+      },
+      "condition": {
+        "renovation_need": 0.074,
+        "maintenance_burden": 0.545,
+        "internet_quality": 0.645
+      },
+      "amenities": {
+        "grocery_minutes": 15.2,
+        "healthcare_minutes": 16.9,
+        "school_quality": 0.539,
+        "parks_minutes": 13.0,
+        "culture_minutes": 19.7
+      },
+      "climate": {
+        "snow_exposure": 0.559,
+        "flood_risk": 0.316,
+        "nature_access": 0.609
+      },
+      "community": {
+        "diversity": 0.508,
+        "newcomer_friendliness": 0.507,
+        "family_orientation": 0.78
+      },
+      "jobs": {
+        "remote_work_suitability": 0.82,
+        "local_job_density": 0.487,
+        "industry_tags": [
+          "government",
+          "healthcare",
+          "logistics"
+        ]
+      }
+    },
+    {
+      "house_id": "house_08",
+      "location": {
+        "city": "Boston",
+        "zipcode": "02124",
+        "neighborhood": "Dorchester",
+        "urbanicity": 0.773,
+        "walkability": 0.643,
+        "transit_access": 0.708,
+        "car_dependence": 0.525,
+        "noise": 0.522,
+        "privacy": 0.508,
+        "miles_to_downtown_boston": 6.0
+      },
+      "cost": {
+        "list_price_usd": 813210,
+        "monthly_cost_usd": 5040
+      },
+      "structure": {
+        "property_type": "single_family",
+        "bedrooms": 4,
+        "bathrooms": 2.0,
+        "sqft": 1832,
+        "parking_spots": 3,
+        "outdoor_space": 0.573,
+        "accessibility": 0.183,
+        "has_office_room": false,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.331,
+        "maintenance_burden": 0.24,
+        "internet_quality": 0.739
+      },
+      "amenities": {
+        "grocery_minutes": 14.8,
+        "healthcare_minutes": 19.9,
+        "school_quality": 0.649,
+        "parks_minutes": 8.0,
+        "culture_minutes": 5
+      },
+      "climate": {
+        "snow_exposure": 0.658,
+        "flood_risk": 0.307,
+        "nature_access": 0.367
+      },
+      "community": {
+        "diversity": 0.61,
+        "newcomer_friendliness": 0.506,
+        "family_orientation": 0.7
+      },
+      "jobs": {
+        "remote_work_suitability": 0.888,
+        "local_job_density": 0.724,
+        "industry_tags": [
+          "education",
+          "finance",
+          "hospitality",
+          "logistics"
+        ]
+      }
+    },
+    {
+      "house_id": "house_09",
+      "location": {
+        "city": "Quincy",
+        "zipcode": "02169",
+        "neighborhood": "Quincy Center",
+        "urbanicity": 0.629,
+        "walkability": 0.627,
+        "transit_access": 0.8,
+        "car_dependence": 0.545,
+        "noise": 0.407,
+        "privacy": 0.564,
+        "miles_to_downtown_boston": 9.58
+      },
+      "cost": {
+        "list_price_usd": 857889,
+        "monthly_cost_usd": 5012
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 0,
+        "bathrooms": 1.0,
+        "sqft": 1246,
+        "parking_spots": 1,
+        "outdoor_space": 0.326,
+        "accessibility": 0.194,
+        "has_office_room": false,
+        "year_built_band": "2000_plus"
+      },
+      "condition": {
+        "renovation_need": 0.238,
+        "maintenance_burden": 0.492,
+        "internet_quality": 0.758
+      },
+      "amenities": {
+        "grocery_minutes": 11.8,
+        "healthcare_minutes": 16.7,
+        "school_quality": 0.712,
+        "parks_minutes": 10.5,
+        "culture_minutes": 13.1
+      },
+      "climate": {
+        "snow_exposure": 0.58,
+        "flood_risk": 0.235,
+        "nature_access": 0.56
+      },
+      "community": {
+        "diversity": 0.787,
+        "newcomer_friendliness": 0.645,
+        "family_orientation": 0.52
+      },
+      "jobs": {
+        "remote_work_suitability": 0.837,
+        "local_job_density": 0.665,
+        "industry_tags": [
+          "education",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_10",
+      "location": {
+        "city": "Medford",
+        "zipcode": "02155",
+        "neighborhood": "Medford Square",
+        "urbanicity": 0.624,
+        "walkability": 0.504,
+        "transit_access": 0.674,
+        "car_dependence": 0.63,
+        "noise": 0.379,
+        "privacy": 0.573,
+        "miles_to_downtown_boston": 7.76
+      },
+      "cost": {
+        "list_price_usd": 847266,
+        "monthly_cost_usd": 5132
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 2,
+        "bathrooms": 1.5,
+        "sqft": 1243,
+        "parking_spots": 0,
+        "outdoor_space": 0.399,
+        "accessibility": 0.248,
+        "has_office_room": true,
+        "year_built_band": "2000_plus"
+      },
+      "condition": {
+        "renovation_need": 0.399,
+        "maintenance_burden": 0.462,
+        "internet_quality": 0.807
+      },
+      "amenities": {
+        "grocery_minutes": 10.7,
+        "healthcare_minutes": 18.1,
+        "school_quality": 0.553,
+        "parks_minutes": 12.4,
+        "culture_minutes": 9.5
+      },
+      "climate": {
+        "snow_exposure": 0.65,
+        "flood_risk": 0.178,
+        "nature_access": 0.475
+      },
+      "community": {
+        "diversity": 0.61,
+        "newcomer_friendliness": 0.832,
+        "family_orientation": 0.54
+      },
+      "jobs": {
+        "remote_work_suitability": 0.688,
+        "local_job_density": 0.675,
+        "industry_tags": [
+          "hospitality",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_11",
+      "location": {
+        "city": "Watertown",
+        "zipcode": "02472",
+        "neighborhood": "Watertown Square",
+        "urbanicity": 0.61,
+        "walkability": 0.579,
+        "transit_access": 0.546,
+        "car_dependence": 0.652,
+        "noise": 0.429,
+        "privacy": 0.594,
+        "miles_to_downtown_boston": 6.91
+      },
+      "cost": {
+        "list_price_usd": 896213,
+        "monthly_cost_usd": 5429
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 1,
+        "bathrooms": 1.0,
+        "sqft": 1228,
+        "parking_spots": 1,
+        "outdoor_space": 0.361,
+        "accessibility": 0.256,
+        "has_office_room": false,
+        "year_built_band": "1980_1999"
+      },
+      "condition": {
+        "renovation_need": 0.123,
+        "maintenance_burden": 0.324,
+        "internet_quality": 0.692
+      },
+      "amenities": {
+        "grocery_minutes": 19.9,
+        "healthcare_minutes": 20.9,
+        "school_quality": 0.775,
+        "parks_minutes": 11.1,
+        "culture_minutes": 14.1
+      },
+      "climate": {
+        "snow_exposure": 0.568,
+        "flood_risk": 0.154,
+        "nature_access": 0.539
+      },
+      "community": {
+        "diversity": 0.596,
+        "newcomer_friendliness": 0.605,
+        "family_orientation": 0.54
+      },
+      "jobs": {
+        "remote_work_suitability": 0.643,
+        "local_job_density": 0.675,
+        "industry_tags": [
+          "finance",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_12",
+      "location": {
+        "city": "Brookline",
+        "zipcode": "02446",
+        "neighborhood": "Coolidge Corner",
+        "urbanicity": 0.835,
+        "walkability": 0.9,
+        "transit_access": 0.826,
+        "car_dependence": 0.388,
+        "noise": 0.441,
+        "privacy": 0.468,
+        "miles_to_downtown_boston": 5.01
+      },
+      "cost": {
+        "list_price_usd": 1050629,
+        "monthly_cost_usd": 6142
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 1,
+        "bathrooms": 1.5,
+        "sqft": 1114,
+        "parking_spots": 0,
+        "outdoor_space": 0.356,
+        "accessibility": 0.258,
+        "has_office_room": false,
+        "year_built_band": "1980_1999"
+      },
+      "condition": {
+        "renovation_need": 0.238,
+        "maintenance_burden": 0.708,
+        "internet_quality": 0.89
+      },
+      "amenities": {
+        "grocery_minutes": 9.0,
+        "healthcare_minutes": 12.2,
+        "school_quality": 0.372,
+        "parks_minutes": 10.2,
+        "culture_minutes": 11.3
+      },
+      "climate": {
+        "snow_exposure": 0.552,
+        "flood_risk": 0.329,
+        "nature_access": 0.291
+      },
+      "community": {
+        "diversity": 0.701,
+        "newcomer_friendliness": 0.713,
+        "family_orientation": 0.5
+      },
+      "jobs": {
+        "remote_work_suitability": 0.785,
+        "local_job_density": 0.756,
+        "industry_tags": [
+          "education",
+          "trades"
+        ]
+      }
+    },
+    {
+      "house_id": "house_13",
+      "location": {
+        "city": "Waltham",
+        "zipcode": "02453",
+        "neighborhood": "Waltham Center",
+        "urbanicity": 0.565,
+        "walkability": 0.584,
+        "transit_access": 0.533,
+        "car_dependence": 0.626,
+        "noise": 0.41,
+        "privacy": 0.647,
+        "miles_to_downtown_boston": 9.76
+      },
+      "cost": {
+        "list_price_usd": 851147,
+        "monthly_cost_usd": 5114
+      },
+      "structure": {
+        "property_type": "multi_family",
+        "bedrooms": 5,
+        "bathrooms": 2.5,
+        "sqft": 2383,
+        "parking_spots": 2,
+        "outdoor_space": 0.569,
+        "accessibility": 0.597,
+        "has_office_room": true,
+        "year_built_band": "1980_1999"
+      },
+      "condition": {
+        "renovation_need": 0.137,
+        "maintenance_burden": 0.217,
+        "internet_quality": 0.749
+      },
+      "amenities": {
+        "grocery_minutes": 11.0,
+        "healthcare_minutes": 12.2,
+        "school_quality": 0.653,
+        "parks_minutes": 10.7,
+        "culture_minutes": 19.1
+      },
+      "climate": {
+        "snow_exposure": 0.693,
+        "flood_risk": 0.304,
+        "nature_access": 0.499
+      },
+      "community": {
+        "diversity": 0.621,
+        "newcomer_friendliness": 0.656,
+        "family_orientation": 0.74
+      },
+      "jobs": {
+        "remote_work_suitability": 0.838,
+        "local_job_density": 0.551,
+        "industry_tags": [
+          "biotech",
+          "healthcare",
+          "hospitality"
+        ]
+      }
+    },
+    {
+      "house_id": "house_14",
+      "location": {
+        "city": "Chelsea",
+        "zipcode": "02150",
+        "neighborhood": "Chelsea",
+        "urbanicity": 0.797,
+        "walkability": 0.537,
+        "transit_access": 0.764,
+        "car_dependence": 0.409,
+        "noise": 0.625,
+        "privacy": 0.379,
+        "miles_to_downtown_boston": 4.81
+      },
+      "cost": {
+        "list_price_usd": 1010049,
+        "monthly_cost_usd": 5958
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 1,
+        "bathrooms": 1.5,
+        "sqft": 1120,
+        "parking_spots": 0,
+        "outdoor_space": 0.093,
+        "accessibility": 0.802,
+        "has_office_room": false,
+        "year_built_band": "2000_plus"
+      },
+      "condition": {
+        "renovation_need": 0.217,
+        "maintenance_burden": 0.63,
+        "internet_quality": 0.779
+      },
+      "amenities": {
+        "grocery_minutes": 15.8,
+        "healthcare_minutes": 12.8,
+        "school_quality": 0.712,
+        "parks_minutes": 8.8,
+        "culture_minutes": 13.7
+      },
+      "climate": {
+        "snow_exposure": 0.668,
+        "flood_risk": 0.295,
+        "nature_access": 0.392
+      },
+      "community": {
+        "diversity": 0.843,
+        "newcomer_friendliness": 0.722,
+        "family_orientation": 0.44
+      },
+      "jobs": {
+        "remote_work_suitability": 0.718,
+        "local_job_density": 0.877,
+        "industry_tags": [
+          "biotech",
+          "hospitality",
+          "tech",
+          "trades"
+        ]
+      }
+    },
+    {
+      "house_id": "house_15",
+      "location": {
+        "city": "Newton",
+        "zipcode": "02459",
+        "neighborhood": "Newton Centre",
+        "urbanicity": 0.482,
+        "walkability": 0.592,
+        "transit_access": 0.604,
+        "car_dependence": 0.601,
+        "noise": 0.266,
+        "privacy": 0.708,
+        "miles_to_downtown_boston": 9.63
+      },
+      "cost": {
+        "list_price_usd": 867275,
+        "monthly_cost_usd": 5399
+      },
+      "structure": {
+        "property_type": "single_family",
+        "bedrooms": 4,
+        "bathrooms": 3.0,
+        "sqft": 2740,
+        "parking_spots": 3,
+        "outdoor_space": 0.62,
+        "accessibility": 0.322,
+        "has_office_room": false,
+        "year_built_band": "1980_1999"
+      },
+      "condition": {
+        "renovation_need": 0.059,
+        "maintenance_burden": 0.185,
+        "internet_quality": 0.725
+      },
+      "amenities": {
+        "grocery_minutes": 9.6,
+        "healthcare_minutes": 14.6,
+        "school_quality": 0.797,
+        "parks_minutes": 6.9,
+        "culture_minutes": 12.2
+      },
+      "climate": {
+        "snow_exposure": 0.585,
+        "flood_risk": 0.333,
+        "nature_access": 0.704
+      },
+      "community": {
+        "diversity": 0.531,
+        "newcomer_friendliness": 0.752,
+        "family_orientation": 0.8
+      },
+      "jobs": {
+        "remote_work_suitability": 0.626,
+        "local_job_density": 0.613,
+        "industry_tags": [
+          "hospitality",
+          "trades"
+        ]
+      }
+    },
+    {
+      "house_id": "house_16",
+      "location": {
+        "city": "Lynn",
+        "zipcode": "01901",
+        "neighborhood": "Downtown Lynn",
+        "urbanicity": 0.689,
+        "walkability": 0.476,
+        "transit_access": 0.591,
+        "car_dependence": 0.584,
+        "noise": 0.568,
+        "privacy": 0.405,
+        "miles_to_downtown_boston": 12.74
+      },
+      "cost": {
+        "list_price_usd": 1071669,
+        "monthly_cost_usd": 6251
+      },
+      "structure": {
+        "property_type": "townhouse",
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1157,
+        "parking_spots": 1,
+        "outdoor_space": 0.457,
+        "accessibility": 0.242,
+        "has_office_room": true,
+        "year_built_band": "1980_1999"
+      },
+      "condition": {
+        "renovation_need": 0.34,
+        "maintenance_burden": 0.728,
+        "internet_quality": 0.75
+      },
+      "amenities": {
+        "grocery_minutes": 7.9,
+        "healthcare_minutes": 11.0,
+        "school_quality": 0.742,
+        "parks_minutes": 11.4,
+        "culture_minutes": 23.0
+      },
+      "climate": {
+        "snow_exposure": 0.532,
+        "flood_risk": 0.298,
+        "nature_access": 0.429
+      },
+      "community": {
+        "diversity": 0.618,
+        "newcomer_friendliness": 0.844,
+        "family_orientation": 0.68
+      },
+      "jobs": {
+        "remote_work_suitability": 0.805,
+        "local_job_density": 0.62,
+        "industry_tags": [
+          "biotech",
+          "logistics"
+        ]
+      }
+    },
+    {
+      "house_id": "house_17",
+      "location": {
+        "city": "Somerville",
+        "zipcode": "02143",
+        "neighborhood": "Union Square",
+        "urbanicity": 0.862,
+        "walkability": 0.888,
+        "transit_access": 0.828,
+        "car_dependence": 0.252,
+        "noise": 0.553,
+        "privacy": 0.366,
+        "miles_to_downtown_boston": 3.83
+      },
+      "cost": {
+        "list_price_usd": 1104454,
+        "monthly_cost_usd": 6302
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 0,
+        "bathrooms": 1.5,
+        "sqft": 797,
+        "parking_spots": 0,
+        "outdoor_space": 0.308,
+        "accessibility": 0.253,
+        "has_office_room": false,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.83,
+        "maintenance_burden": 0.172,
+        "internet_quality": 0.867
+      },
+      "amenities": {
+        "grocery_minutes": 6.9,
+        "healthcare_minutes": 16.2,
+        "school_quality": 0.56,
+        "parks_minutes": 10.1,
+        "culture_minutes": 18.8
+      },
+      "climate": {
+        "snow_exposure": 0.558,
+        "flood_risk": 0.237,
+        "nature_access": 0.385
+      },
+      "community": {
+        "diversity": 0.685,
+        "newcomer_friendliness": 0.438,
+        "family_orientation": 0.46
+      },
+      "jobs": {
+        "remote_work_suitability": 0.785,
+        "local_job_density": 0.836,
+        "industry_tags": [
+          "biotech",
+          "government",
+          "healthcare"
+        ]
+      }
+    },
+    {
+      "house_id": "house_18",
+      "location": {
+        "city": "Revere",
+        "zipcode": "02151",
+        "neighborhood": "Revere",
+        "urbanicity": 0.709,
+        "walkability": 0.45,
+        "transit_access": 0.74,
+        "car_dependence": 0.528,
+        "noise": 0.515,
+        "privacy": 0.446,
+        "miles_to_downtown_boston": 5.85
+      },
+      "cost": {
+        "list_price_usd": 1058731,
+        "monthly_cost_usd": 6070
+      },
+      "structure": {
+        "property_type": "townhouse",
+        "bedrooms": 2,
+        "bathrooms": 2.0,
+        "sqft": 1110,
+        "parking_spots": 1,
+        "outdoor_space": 0.515,
+        "accessibility": 0.218,
+        "has_office_room": true,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.644,
+        "maintenance_burden": 0.502,
+        "internet_quality": 0.698
+      },
+      "amenities": {
+        "grocery_minutes": 15.6,
+        "healthcare_minutes": 17.3,
+        "school_quality": 0.685,
+        "parks_minutes": 13.0,
+        "culture_minutes": 9.3
+      },
+      "climate": {
+        "snow_exposure": 0.559,
+        "flood_risk": 0.601,
+        "nature_access": 0.454
+      },
+      "community": {
+        "diversity": 0.779,
+        "newcomer_friendliness": 0.441,
+        "family_orientation": 0.68
+      },
+      "jobs": {
+        "remote_work_suitability": 0.647,
+        "local_job_density": 0.772,
+        "industry_tags": [
+          "education",
+          "finance",
+          "government",
+          "healthcare"
+        ]
+      }
+    },
+    {
+      "house_id": "house_19",
+      "location": {
+        "city": "Dedham",
+        "zipcode": "02026",
+        "neighborhood": "Dedham Square",
+        "urbanicity": 0.431,
+        "walkability": 0.41,
+        "transit_access": 0.393,
+        "car_dependence": 0.753,
+        "noise": 0.318,
+        "privacy": 0.787,
+        "miles_to_downtown_boston": 10.39
+      },
+      "cost": {
+        "list_price_usd": 1077193,
+        "monthly_cost_usd": 6197
+      },
+      "structure": {
+        "property_type": "single_family",
+        "bedrooms": 2,
+        "bathrooms": 3.0,
+        "sqft": 3102,
+        "parking_spots": 2,
+        "outdoor_space": 0.479,
+        "accessibility": 0.441,
+        "has_office_room": false,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.592,
+        "maintenance_burden": 0.183,
+        "internet_quality": 0.608
+      },
+      "amenities": {
+        "grocery_minutes": 10.3,
+        "healthcare_minutes": 18.6,
+        "school_quality": 0.777,
+        "parks_minutes": 1.4,
+        "culture_minutes": 14.2
+      },
+      "climate": {
+        "snow_exposure": 0.601,
+        "flood_risk": 0.204,
+        "nature_access": 0.728
+      },
+      "community": {
+        "diversity": 0.686,
+        "newcomer_friendliness": 0.834,
+        "family_orientation": 0.8
+      },
+      "jobs": {
+        "remote_work_suitability": 0.736,
+        "local_job_density": 0.658,
+        "industry_tags": [
+          "government",
+          "trades"
+        ]
+      }
+    },
+    {
+      "house_id": "house_20",
+      "location": {
+        "city": "Boston",
+        "zipcode": "02131",
+        "neighborhood": "Roslindale",
+        "urbanicity": 0.704,
+        "walkability": 0.672,
+        "transit_access": 0.594,
+        "car_dependence": 0.509,
+        "noise": 0.384,
+        "privacy": 0.583,
+        "miles_to_downtown_boston": 7.36
+      },
+      "cost": {
+        "list_price_usd": 965425,
+        "monthly_cost_usd": 5934
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 1,
+        "bathrooms": 1.0,
+        "sqft": 1351,
+        "parking_spots": 0,
+        "outdoor_space": 0.416,
+        "accessibility": 0.328,
+        "has_office_room": false,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.715,
+        "maintenance_burden": 0.476,
+        "internet_quality": 0.794
+      },
+      "amenities": {
+        "grocery_minutes": 12.5,
+        "healthcare_minutes": 15.6,
+        "school_quality": 0.555,
+        "parks_minutes": 14.2,
+        "culture_minutes": 11.3
+      },
+      "climate": {
+        "snow_exposure": 0.651,
+        "flood_risk": 0.171,
+        "nature_access": 0.449
+      },
+      "community": {
+        "diversity": 0.724,
+        "newcomer_friendliness": 0.856,
+        "family_orientation": 0.54
+      },
+      "jobs": {
+        "remote_work_suitability": 0.683,
+        "local_job_density": 0.73,
+        "industry_tags": [
+          "finance",
+          "hospitality",
+          "logistics",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_21",
+      "location": {
+        "city": "Brookline",
+        "zipcode": "02445",
+        "neighborhood": "Brookline Village",
+        "urbanicity": 0.797,
+        "walkability": 0.769,
+        "transit_access": 0.757,
+        "car_dependence": 0.39,
+        "noise": 0.406,
+        "privacy": 0.562,
+        "miles_to_downtown_boston": 5.7
+      },
+      "cost": {
+        "list_price_usd": 1146558,
+        "monthly_cost_usd": 6774
+      },
+      "structure": {
+        "property_type": "townhouse",
+        "bedrooms": 4,
+        "bathrooms": 3.0,
+        "sqft": 1791,
+        "parking_spots": 2,
+        "outdoor_space": 0.375,
+        "accessibility": 0.281,
+        "has_office_room": true,
+        "year_built_band": "1940_1979"
+      },
+      "condition": {
+        "renovation_need": 0.693,
+        "maintenance_burden": 0.71,
+        "internet_quality": 0.775
+      },
+      "amenities": {
+        "grocery_minutes": 13.9,
+        "healthcare_minutes": 15.9,
+        "school_quality": 0.558,
+        "parks_minutes": 7.7,
+        "culture_minutes": 6.9
+      },
+      "climate": {
+        "snow_exposure": 0.564,
+        "flood_risk": 0.157,
+        "nature_access": 0.324
+      },
+      "community": {
+        "diversity": 0.701,
+        "newcomer_friendliness": 0.846,
+        "family_orientation": 0.72
+      },
+      "jobs": {
+        "remote_work_suitability": 0.685,
+        "local_job_density": 0.869,
+        "industry_tags": [
+          "healthcare",
+          "logistics",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_22",
+      "location": {
+        "city": "Boston",
+        "zipcode": "02118",
+        "neighborhood": "South End",
+        "urbanicity": 0.943,
+        "walkability": 0.894,
+        "transit_access": 0.854,
+        "car_dependence": 0.237,
+        "noise": 0.726,
+        "privacy": 0.384,
+        "miles_to_downtown_boston": 3.18
+      },
+      "cost": {
+        "list_price_usd": 760478,
+        "monthly_cost_usd": 4516
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 0,
+        "bathrooms": 1.0,
+        "sqft": 885,
+        "parking_spots": 1,
+        "outdoor_space": 0.204,
+        "accessibility": 0.472,
+        "has_office_room": false,
+        "year_built_band": "1980_1999"
+      },
+      "condition": {
+        "renovation_need": 0.17,
+        "maintenance_burden": 0.378,
+        "internet_quality": 0.962
+      },
+      "amenities": {
+        "grocery_minutes": 7.7,
+        "healthcare_minutes": 10.4,
+        "school_quality": 0.486,
+        "parks_minutes": 6.8,
+        "culture_minutes": 8.0
+      },
+      "climate": {
+        "snow_exposure": 0.538,
+        "flood_risk": 0.324,
+        "nature_access": 0.299
+      },
+      "community": {
+        "diversity": 0.876,
+        "newcomer_friendliness": 0.75,
+        "family_orientation": 0.44
+      },
+      "jobs": {
+        "remote_work_suitability": 0.748,
+        "local_job_density": 0.843,
+        "industry_tags": [
+          "biotech",
+          "hospitality",
+          "tech"
+        ]
+      }
+    },
+    {
+      "house_id": "house_23",
+      "location": {
+        "city": "Needham",
+        "zipcode": "02492",
+        "neighborhood": "Needham Center",
+        "urbanicity": 0.421,
+        "walkability": 0.424,
+        "transit_access": 0.389,
+        "car_dependence": 0.766,
+        "noise": 0.225,
+        "privacy": 0.769,
+        "miles_to_downtown_boston": 11.6
+      },
+      "cost": {
+        "list_price_usd": 1022141,
+        "monthly_cost_usd": 5920
+      },
+      "structure": {
+        "property_type": "townhouse",
+        "bedrooms": 3,
+        "bathrooms": 2.5,
+        "sqft": 1347,
+        "parking_spots": 2,
+        "outdoor_space": 0.416,
+        "accessibility": 0.587,
+        "has_office_room": true,
+        "year_built_band": "2000_plus"
+      },
+      "condition": {
+        "renovation_need": 0.382,
+        "maintenance_burden": 0.652,
+        "internet_quality": 0.723
+      },
+      "amenities": {
+        "grocery_minutes": 17.9,
+        "healthcare_minutes": 14.5,
+        "school_quality": 0.649,
+        "parks_minutes": 14.2,
+        "culture_minutes": 12.0
+      },
+      "climate": {
+        "snow_exposure": 0.645,
+        "flood_risk": 0.213,
+        "nature_access": 0.625
+      },
+      "community": {
+        "diversity": 0.663,
+        "newcomer_friendliness": 0.515,
+        "family_orientation": 0.82
+      },
+      "jobs": {
+        "remote_work_suitability": 0.708,
+        "local_job_density": 0.629,
+        "industry_tags": [
+          "finance",
+          "government",
+          "healthcare",
+          "logistics"
+        ]
+      }
+    },
+    {
+      "house_id": "house_24",
+      "location": {
+        "city": "Framingham",
+        "zipcode": "01702",
+        "neighborhood": "Downtown Framingham",
+        "urbanicity": 0.496,
+        "walkability": 0.457,
+        "transit_access": 0.382,
+        "car_dependence": 0.752,
+        "noise": 0.388,
+        "privacy": 0.662,
+        "miles_to_downtown_boston": 19.45
+      },
+      "cost": {
+        "list_price_usd": 787678,
+        "monthly_cost_usd": 4566
+      },
+      "structure": {
+        "property_type": "single_family",
+        "bedrooms": 2,
+        "bathrooms": 3.0,
+        "sqft": 3058,
+        "parking_spots": 2,
+        "outdoor_space": 0.907,
+        "accessibility": 0.406,
+        "has_office_room": true,
+        "year_built_band": "2000_plus"
+      },
+      "condition": {
+        "renovation_need": 0.387,
+        "maintenance_burden": 0.364,
+        "internet_quality": 0.685
+      },
+      "amenities": {
+        "grocery_minutes": 12.9,
+        "healthcare_minutes": 20.7,
+        "school_quality": 0.749,
+        "parks_minutes": 11.1,
+        "culture_minutes": 25.7
+      },
+      "climate": {
+        "snow_exposure": 0.654,
+        "flood_risk": 0.179,
+        "nature_access": 0.649
+      },
+      "community": {
+        "diversity": 0.678,
+        "newcomer_friendliness": 0.505,
+        "family_orientation": 0.76
+      },
+      "jobs": {
+        "remote_work_suitability": 0.714,
+        "local_job_density": 0.486,
+        "industry_tags": [
+          "finance",
+          "healthcare",
+          "logistics",
+          "trades"
+        ]
+      }
+    },
+    {
+      "house_id": "house_25",
+      "location": {
+        "city": "Boston",
+        "zipcode": "02116",
+        "neighborhood": "Back Bay",
+        "urbanicity": 0.969,
+        "walkability": 0.967,
+        "transit_access": 0.94,
+        "car_dependence": 0.193,
+        "noise": 0.765,
+        "privacy": 0.251,
+        "miles_to_downtown_boston": 1.35
+      },
+      "cost": {
+        "list_price_usd": 880678,
+        "monthly_cost_usd": 5251
+      },
+      "structure": {
+        "property_type": "condo",
+        "bedrooms": 1,
+        "bathrooms": 2.0,
+        "sqft": 1105,
+        "parking_spots": 0,
+        "outdoor_space": 0.187,
+        "accessibility": 0.289,
+        "has_office_room": false,
+        "year_built_band": "1980_1999"
+      },
+      "condition": {
+        "renovation_need": 0.262,
+        "maintenance_burden": 0.448,
+        "internet_quality": 0.957
+      },
+      "amenities": {
+        "grocery_minutes": 5.9,
+        "healthcare_minutes": 17.1,
+        "school_quality": 0.561,
+        "parks_minutes": 11.0,
+        "culture_minutes": 5
+      },
+      "climate": {
+        "snow_exposure": 0.53,
+        "flood_risk": 0.231,
+        "nature_access": 0.222
+      },
+      "community": {
+        "diversity": 0.822,
+        "newcomer_friendliness": 0.368,
+        "family_orientation": 0.42
+      },
+      "jobs": {
+        "remote_work_suitability": 0.827,
+        "local_job_density": 0.858,
+        "industry_tags": [
+          "biotech",
+          "finance",
+          "tech"
+        ]
+      }
+    }
+  ]
+}
