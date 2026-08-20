@@ -19,7 +19,7 @@
 | `people_latents.json` | Numeric person prefs/constraints/tone used to score |
 | `houses_latents.json` | Numeric synthetic house facts used to score |
 
-These GT files use IDs `person_01`…`person_25` and `house_01`…`house_25` from the **synthetic latent houses**, not `boston_house_*` from `house_data.py`. They are for evaluating recovery against known prefs (and tone ablations on the same people), not as labels for the Boston assessment listings.
+These GT files use IDs `person_01`…`person_25` and `house_01`…`house_15` (contiguous). Ten houses were removed so the ground-truth matching covers **every remaining house** (25 people × 15 houses; 10 people unmatched). The rename map from pre-trim IDs is stored in `matching_ground_truth.json` / `houses_latents.json` as `house_id_rename`. They are for evaluating recovery against known prefs (and tone ablations on the same people), not as labels for the Boston assessment listings in `house_data.py`.
 
 ## Matching
 
