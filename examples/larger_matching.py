@@ -60,7 +60,7 @@ def main() -> None:
             response_sample_size=2,
             agent_workers=8,
             meta_idea_count=1,
-            max_revision_rounds=3,
+            max_revision_rounds=10,
             use_meta_orchestrator=False,
         ),
     )

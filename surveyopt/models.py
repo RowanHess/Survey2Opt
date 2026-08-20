@@ -52,6 +52,7 @@ class JsonAgentTask(BaseModel):
     kind: Literal[
         "meta_orchestrator",
         "orchestrator",
+        "calibrator",
         "question",
         "auditor",
     ]
@@ -120,12 +121,15 @@ class AggregationCodePlan(BaseModel):
     rationale: str = ""
 
 class AgentOutput(BaseModel):
+    # Unique logical output ID. When one question-agent call processes a
+    # batch of respondents, the pipeline derives one ID per respondent from
+    # the shared batch task ID.
     task_id: str
 
     # Stable ID from the QuestionAgentPlan.
     #
     # Unlike task_id, this does not include the strategy ID, revision round,
-    # respondent ID, or question ID.
+    # survey ID, respondent ID, or question ID.
     source_task_id: str
 
     entity_id: str
@@ -136,6 +140,25 @@ class AgentOutput(BaseModel):
 
     raw_attempts: list[str]
     llm_metadata: list[dict[str, Any]]
+
+
+class CommunicationStyleProfile(BaseModel):
+    """Compact, content-free baseline for one respondent's writing style."""
+
+    entity_id: str
+    entity_type: str
+
+    verbosity: Literal["low", "medium", "high", "unknown"]
+    directness: Literal["low", "medium", "high", "unknown"]
+    emphasis: Literal["low", "medium", "high", "unknown"]
+    hedging: Literal["low", "medium", "high", "unknown"]
+    confidence: Literal["low", "medium", "high"]
+
+    style_summary: str = Field(max_length=240)
+
+
+class ToneCalibrationResult(BaseModel):
+    profiles: list[CommunicationStyleProfile]
 
 
 class WeightGenerationIdea(BaseModel):

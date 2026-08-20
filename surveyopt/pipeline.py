@@ -12,12 +12,18 @@ from typing import Any
 
 from surveyopt.aggregation import execute_generated_aggregation
 from surveyopt.audit import make_auditor_task
+from surveyopt.calibration import (
+    make_tone_calibration_task,
+    profile_map,
+    validate_tone_calibration_result,
+)
 from surveyopt.json_tasks import JsonTaskError, JsonTaskRunner
 from surveyopt.meta_orchestration import make_meta_orchestrator_task
 from surveyopt.models import (
     AggregationCodePlan,
     AgentOutput,
     AuditResult,
+    CommunicationStyleProfile,
     DecisionGuidance,
     DecisionProblem,
     JsonAgentTask,
@@ -25,10 +31,12 @@ from surveyopt.models import (
     QuestionAgentPlan,
     SurveyDefinition,
     SurveyResponse,
+    ToneCalibrationResult,
     WeightGenerationIdea,
 )
 
 from surveyopt.orchestration import (
+    TONE_CALIBRATION_RULES,
     make_aggregation_code_task,
     make_question_format_task,
     validate_aggregation_code_plan,
@@ -54,7 +62,7 @@ class PipelineConfig:
     meta_idea_count: int = 3
 
     # Initial orchestration plus possible auditor-driven revisions.
-    max_revision_rounds: int = 3
+    max_revision_rounds: int = 10
 
     auditor_mode: Literal[
         "lenient",
@@ -162,9 +170,11 @@ class DecisionPipeline:
                 : self.config.response_sample_size
             ]
 
-            response_sample = responses[
-                : self.config.response_sample_size
-            ]
+            tone_profiles = self._build_tone_profiles(
+                run_directory=run_directory,
+                surveys=surveys,
+                responses=responses,
+            )
 
             strategies = self._get_weight_generation_strategies(
                 run_directory=run_directory,
@@ -199,6 +209,7 @@ class DecisionPipeline:
                     response_sample=response_sample,
                     decision_problem=decision_problem,
                     guidance=guidance,
+                    tone_profiles=tone_profiles,
                 )
 
                 candidates.append(candidate)
@@ -264,6 +275,105 @@ class DecisionPipeline:
                 self._failure_payload(exc),
             )
             raise
+
+    def _build_tone_profiles(
+        self,
+        *,
+        run_directory: Path,
+        surveys: list[SurveyDefinition],
+        responses: list[SurveyResponse],
+    ) -> dict[tuple[str, str], CommunicationStyleProfile]:
+        """Create one reusable communication-style baseline per respondent."""
+
+        survey_by_id = {
+            survey.id: survey
+            for survey in surveys
+        }
+        respondents_by_entity: dict[tuple[str, str], dict[str, Any]] = {}
+
+        for response in responses:
+            entity_key = (
+                response.entity_type,
+                response.entity_id,
+            )
+            respondent = respondents_by_entity.setdefault(
+                entity_key,
+                {
+                    "entity": {
+                        "id": response.entity_id,
+                        "type": response.entity_type,
+                    },
+                    "answers": [],
+                },
+            )
+            survey = survey_by_id[response.survey_id]
+
+            for question in survey.questions:
+                if question.id not in response.answers:
+                    continue
+
+                respondent["answers"].append(
+                    {
+                        "survey": {
+                            "id": survey.id,
+                            "respondent_type": survey.respondent_type,
+                        },
+                        "question": question.model_dump(mode="json"),
+                        "answer": response.answers[question.id],
+                    }
+                )
+
+        calibration_respondents = [
+            respondent
+            for respondent in respondents_by_entity.values()
+            if respondent["answers"]
+        ]
+
+        if not calibration_respondents:
+            self._write_json(
+                run_directory / "tone_profiles.json",
+                {
+                    "profiles": [],
+                    "raw_attempts": [],
+                    "llm_metadata": [],
+                },
+            )
+            return {}
+
+        expected_entities = {
+            (
+                respondent["entity"]["type"],
+                respondent["entity"]["id"],
+            )
+            for respondent in calibration_respondents
+        }
+        task = make_tone_calibration_task(
+            respondents=calibration_respondents,
+        )
+        task_result = self.task_runner.run(
+            task,
+            response_model=ToneCalibrationResult,
+            result_validator=lambda result: validate_tone_calibration_result(
+                result,
+                expected_entities,
+            ),
+        )
+        calibration_result: ToneCalibrationResult = task_result.value
+
+        self._write_json(
+            run_directory / "tone_profiles.json",
+            {
+                "profiles": [
+                    profile.model_dump(mode="json")
+                    for profile in calibration_result.profiles
+                ],
+                "raw_attempts": task_result.raw_attempts,
+                "llm_metadata": task_result.metadata,
+            },
+        )
+
+        return profile_map(calibration_result)
+
     def _get_weight_generation_strategies(
         self,
         *,
@@ -357,6 +467,10 @@ class DecisionPipeline:
         response_sample: list[SurveyResponse],
         decision_problem: DecisionProblem,
         guidance: DecisionGuidance,
+        tone_profiles: dict[
+            tuple[str, str],
+            CommunicationStyleProfile,
+        ],
     ) -> CandidateRunResult:
         candidate_directory.mkdir(parents=True, exist_ok=True)
 
@@ -480,6 +594,7 @@ class DecisionPipeline:
                     task_namespace=(
                         f"{strategy.id}__round_{round_index}"
                     ),
+                    tone_profiles=tone_profiles,
                 )
 
                 agent_outputs = self._run_question_agents(
@@ -489,7 +604,8 @@ class DecisionPipeline:
 
                 aggregation_inputs = [
                 {
-                    # Unique runtime invocation ID.
+                    # Unique per-entity output ID. Several outputs may come
+                    # from one batched question-agent invocation.
                     "task_id": output.task_id,
 
                     # Stable task ID from the QuestionAgentPlan.
@@ -660,30 +776,53 @@ class DecisionPipeline:
 
         output_directory.mkdir(parents=True, exist_ok=True)
 
-        def execute_task(task: JsonAgentTask) -> AgentOutput:
+        def execute_task(task: JsonAgentTask) -> list[AgentOutput]:
             try:
                 result = self.task_runner.run(task)
 
                 payload = task.input_payload
+                batch_values = result.value["outputs"]
+                batch_outputs: list[AgentOutput] = []
 
-                output = AgentOutput(
-                    task_id=task.task_id,
-                    source_task_id=payload["source_task_id"],
-                    entity_id=payload["entity"]["id"],
-                    entity_type=payload["entity"]["type"],
-                    question_id=payload["question"]["id"],
-                    output=result.value,
-                    raw_attempts=result.raw_attempts,
-                    llm_metadata=result.metadata,
-                )
+                for respondent in payload["respondents"]:
+                    entity = respondent["entity"]
+                    entity_id = entity["id"]
+
+                    batch_outputs.append(
+                        AgentOutput(
+                            task_id=(
+                                f"{task.task_id}"
+                                f"__{entity_id}"
+                            ),
+                            source_task_id=payload["source_task_id"],
+                            entity_id=entity_id,
+                            entity_type=entity["type"],
+                            question_id=payload["question"]["id"],
+                            output=batch_values[entity_id],
+                            raw_attempts=result.raw_attempts,
+                            llm_metadata=result.metadata,
+                        )
+                    )
 
                 self._write_json(
                     output_directory
                     / f"{self._safe_filename(task.task_id)}.json",
-                    output.model_dump(mode="json"),
+                    {
+                        "batch_task_id": task.task_id,
+                        "source_task_id": payload["source_task_id"],
+                        "survey": payload["survey"],
+                        "question": payload["question"],
+                        "respondent_count": len(payload["respondents"]),
+                        "outputs": [
+                            output.model_dump(mode="json")
+                            for output in batch_outputs
+                        ],
+                        "raw_attempts": result.raw_attempts,
+                        "llm_metadata": result.metadata,
+                    },
                 )
 
-                return output
+                return batch_outputs
 
             except Exception as exc:
                 self._write_json(
@@ -707,7 +846,7 @@ class DecisionPipeline:
             }
 
             for future in as_completed(future_to_task):
-                outputs.append(future.result())
+                outputs.extend(future.result())
 
         outputs.sort(key=lambda output: output.task_id)
 
@@ -720,20 +859,17 @@ class DecisionPipeline:
         surveys: list[SurveyDefinition],
         responses: list[SurveyResponse],
         task_namespace: str,
+        tone_profiles: dict[
+            tuple[str, str],
+            CommunicationStyleProfile,
+        ],
     ) -> list[JsonAgentTask]:
-        survey_by_id = {
-            survey.id: survey
-            for survey in surveys
-        }
-
         runtime_tasks: list[JsonAgentTask] = []
 
         for plan_task in question_agent_plan.question_tasks:
-            for response in responses:
-                if response.entity_type != plan_task.target_entity_type:
+            for survey in surveys:
+                if survey.respondent_type != plan_task.target_entity_type:
                     continue
-
-                survey = survey_by_id[response.survey_id]
 
                 question = next(
                     (
@@ -747,37 +883,108 @@ class DecisionPipeline:
                 if question is None:
                     continue
 
-                if question.id not in response.answers:
+                matching_responses = [
+                    response
+                    for response in responses
+                    if response.survey_id == survey.id
+                    and response.entity_type == plan_task.target_entity_type
+                    and question.id in response.answers
+                ]
+
+                if not matching_responses:
                     continue
+
+                entity_ids = [
+                    response.entity_id
+                    for response in matching_responses
+                ]
+
+                if len(set(entity_ids)) != len(entity_ids):
+                    raise ValueError(
+                        "Question-agent batches require unique entity IDs. "
+                        f"Duplicate ID found for survey {survey.id!r}, "
+                        f"question {question.id!r}."
+                    )
 
                 task_id = (
                     f"{task_namespace}"
                     f"__{plan_task.task_id}"
-                    f"__{response.entity_id}"
+                    f"__{survey.id}"
                     f"__{question.id}"
                 )
 
                 input_payload = {
                     "source_task_id": plan_task.task_id,
-
-                    "entity": {
-                        "id": response.entity_id,
-                        "type": response.entity_type,
-                    },
                     "survey": {
                         "id": survey.id,
                         "respondent_type": survey.respondent_type,
                     },
                     "question": question.model_dump(mode="json"),
-                    "answer": response.answers[question.id],
+                    "respondents": [
+                        {
+                            "entity": {
+                                "id": response.entity_id,
+                                "type": response.entity_type,
+                            },
+                            "answer": response.answers[question.id],
+                            "tone_profile": tone_profiles[
+                                (
+                                    response.entity_type,
+                                    response.entity_id,
+                                )
+                            ].model_dump(
+                                mode="json",
+                                exclude={"entity_id", "entity_type"},
+                            ),
+                        }
+                        for response in matching_responses
+                    ],
                 }
 
+                batch_output_schema = {
+                    "$defs": {
+                        "per_respondent_output": plan_task.output_schema,
+                    },
+                    "type": "object",
+                    "required": ["outputs"],
+                    "properties": {
+                        "outputs": {
+                            "type": "object",
+                            "required": entity_ids,
+                            "propertyNames": {
+                                "enum": entity_ids,
+                            },
+                            "additionalProperties": {
+                                "$ref": "#/$defs/per_respondent_output",
+                            },
+                        }
+                    },
+                    "additionalProperties": False,
+                }
 
                 runtime_tasks.append(
                     plan_task.model_copy(
                         update={
                             "task_id": task_id,
                             "input_payload": input_payload,
+                            "output_schema": batch_output_schema,
+                            "system_prompt": (
+                                f"{plan_task.system_prompt}\n\n"
+                                f"{TONE_CALIBRATION_RULES}"
+                            ),
+                            "instructions": (
+                                f"{plan_task.instructions}\n\n"
+                                "Process every respondent in the supplied "
+                                "batch in this single call. Use the shared "
+                                "question context to interpret answers "
+                                "consistently, and use each respondent's "
+                                "tone_profile only for within-person tone "
+                                "calibration. "
+                                "Return an `outputs` object containing exactly "
+                                "one entry for every supplied entity ID. Each "
+                                "entry must independently match the original "
+                                "per-respondent output schema."
+                            ),
                         }
                     )
                 )

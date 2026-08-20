@@ -59,7 +59,7 @@ def main() -> None:
             response_sample_size=10,
             agent_workers=8,
             meta_idea_count=1,
-            max_revision_rounds=3,
+            max_revision_rounds=10,
         ),
     )
 

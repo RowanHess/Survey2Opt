@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import pytest
 
-from surveyopt.matching import solve_bipartite_matching
+pytest.importorskip("gurobipy")
+
+from surveyopt.matching import solve_bipartite_matching  # noqa: E402
 
 
 def test_bipartite_matching() -> None:
@@ -25,11 +27,10 @@ def test_bipartite_matching() -> None:
 
     try:
         result = solve_bipartite_matching(optimization_input)
-    except Exception as exc:        
-        # pytest.skip(
-        #     f"Gurobi is unavailable or unlicensed in this environment: {exc}"
-        # )
-        pass
+    except Exception as exc:
+        pytest.skip(
+            f"Gurobi is unavailable or unlicensed in this environment: {exc}"
+        )
 
     assert result["status"] == "optimal"
     assert result["objective_value"] == 18.0

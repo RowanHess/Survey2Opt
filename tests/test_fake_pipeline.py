@@ -29,42 +29,52 @@ CATEGORY_SCHEMA = {
 }
 
 
+class RecordingTextFixtureLLM(TextFixtureLLM):
+    def __init__(self, fixture_directory: Path) -> None:
+        super().__init__(fixture_directory)
+        self.requests = []
+
+    def complete(self, request):
+        self.requests.append(request)
+        return super().complete(request)
+
+
 AGGREGATION_CODE = """
 def aggregate(question_outputs, survey, responses):
     left = {}
     right = {}
 
     for entry in question_outputs:
-        entity_type = get(entry, "entity_type")
-        entity_id = get(entry, "entity_id")
-        output = get(entry, "output", {})
-        categories = get(output, "categories", [])
+        entity_type = entry["entity_type"]
+        entity_id = entry["entity_id"]
+        output = entry.get("output", {})
+        categories = output.get("categories", [])
 
         if entity_type == "seeker":
-            set_item(left, entity_id, categories)
+            left[entity_id] = categories
 
         if entity_type == "candidate":
-            set_item(right, entity_id, categories)
+            right[entity_id] = categories
 
     weights = {}
 
-    for left_id in keys(left):
+    for left_id in left:
         row = {}
 
-        for right_id in keys(right):
+        for right_id in right:
             score = 0
 
-            for category in get(left, left_id, []):
-                if category in get(right, right_id, []):
+            for category in left.get(left_id, []):
+                if category in right.get(right_id, []):
                     score = 1
 
-            set_item(row, right_id, score)
+            row[right_id] = score
 
-        set_item(weights, left_id, row)
+        weights[left_id] = row
 
     return {
-        "left_ids": keys(left),
-        "right_ids": keys(right),
+        "left_ids": list(left),
+        "right_ids": list(right),
         "weights": weights
     }
 """.strip()
@@ -107,7 +117,7 @@ def test_fake_pipeline(tmp_path: Path) -> None:
     fixture_directory = tmp_path / "fixtures"
     fixture_directory.mkdir()
 
-    orchestrator_plan = {
+    question_agent_plan = {
         "question_tasks": [
             {
                 "task_id": "seeker_categories",
@@ -136,42 +146,107 @@ def test_fake_pipeline(tmp_path: Path) -> None:
                 "output_schema": CATEGORY_SCHEMA,
             },
         ],
-        "aggregation": {
+        "assumptions": [
+            "A shared category indicates compatibility."
+        ],
+        "representation_summary": "Normalize answers into categories.",
+    }
+
+    write_fixture(
+        fixture_directory,
+        "tone_calibrator",
+        {
+            "profiles": [
+                {
+                    "entity_id": "seeker_1",
+                    "entity_type": "seeker",
+                    "verbosity": "medium",
+                    "directness": "medium",
+                    "emphasis": "low",
+                    "hedging": "medium",
+                    "confidence": "low",
+                    "style_summary": "Limited evidence; generally neutral.",
+                },
+                {
+                    "entity_id": "candidate_1",
+                    "entity_type": "candidate",
+                    "verbosity": "low",
+                    "directness": "medium",
+                    "emphasis": "low",
+                    "hedging": "low",
+                    "confidence": "medium",
+                    "style_summary": "Usually calm and concise.",
+                },
+                {
+                    "entity_id": "candidate_2",
+                    "entity_type": "candidate",
+                    "verbosity": "low",
+                    "directness": "high",
+                    "emphasis": "high",
+                    "hedging": "low",
+                    "confidence": "medium",
+                    "style_summary": "Usually concise and emphatic.",
+                },
+            ]
+        },
+    )
+
+    write_fixture(
+        fixture_directory,
+        "question_format_orchestrator__direct_orchestration__round_1",
+        question_agent_plan,
+    )
+
+    write_fixture(
+        fixture_directory,
+        "aggregation_code_orchestrator__direct_orchestration__round_1",
+        {
             "code": AGGREGATION_CODE,
             "rationale": (
                 "Use binary overlap between desired and available categories."
             ),
         },
-        "assumptions": [
-            "A shared category indicates compatibility."
-        ],
-    }
-
-    write_fixture(
-        fixture_directory,
-        "orchestrator",
-        orchestrator_plan,
     )
 
     write_fixture(
         fixture_directory,
-        "seeker_categories__seeker_1__desired_partner",
-        {"categories": ["hiking", "dogs"]},
+        (
+            "direct_orchestration__round_1__seeker_categories"
+            "__seeker_survey__desired_partner"
+        ),
+        {
+            "outputs": {
+                "seeker_1": {"categories": ["hiking", "dogs"]},
+            }
+        },
     )
 
     write_fixture(
         fixture_directory,
-        "candidate_categories__candidate_1__self_description",
-        {"categories": ["hiking", "dogs"]},
+        (
+            "direct_orchestration__round_1__candidate_categories"
+            "__candidate_survey__self_description"
+        ),
+        {
+            "outputs": {
+                "candidate_1": {"categories": ["hiking", "dogs"]},
+                "candidate_2": {"categories": ["museums"]},
+            }
+        },
     )
 
     write_fixture(
         fixture_directory,
-        "candidate_categories__candidate_2__self_description",
-        {"categories": ["museums"]},
+        "auditor__direct_orchestration__round_1",
+        {
+            "approved": True,
+            "summary": "The test decision is reasonable.",
+            "issues": [],
+            "feedback_to_orchestrator": "",
+        },
     )
 
-    fake_llm = TextFixtureLLM(fixture_directory)
+    fake_llm = RecordingTextFixtureLLM(fixture_directory)
 
     pipeline = DecisionPipeline(
         task_runner=JsonTaskRunner(
@@ -184,6 +259,8 @@ def test_fake_pipeline(tmp_path: Path) -> None:
         config=PipelineConfig(
             artifact_root=tmp_path / "runs",
             agent_workers=2,
+            use_meta_orchestrator=False,
+            max_revision_rounds=1,
         ),
     )
 
@@ -205,7 +282,11 @@ def test_fake_pipeline(tmp_path: Path) -> None:
             SurveyQuestion(
                 id="self_description",
                 text="Describe yourself.",
-            )
+            ),
+            SurveyQuestion(
+                id="priority_context",
+                text="Describe how strongly you usually state preferences.",
+            ),
         ],
     )
 
@@ -223,7 +304,8 @@ def test_fake_pipeline(tmp_path: Path) -> None:
             entity_type="candidate",
             survey_id="candidate_survey",
             answers={
-                "self_description": "I have a dog and hike often."
+                "self_description": "I have a dog and hike often.",
+                "priority_context": "I usually describe things calmly.",
             },
         ),
         SurveyResponse(
@@ -231,12 +313,13 @@ def test_fake_pipeline(tmp_path: Path) -> None:
             entity_type="candidate",
             survey_id="candidate_survey",
             answers={
-                "self_description": "I enjoy art museums."
+                "self_description": "I enjoy art museums.",
+                "priority_context": "I tend to use emphatic language.",
             },
         ),
     ]
 
-    result = pipeline.run(
+    successful_results = pipeline.run(
         surveys=[
             seeker_survey,
             candidate_survey,
@@ -252,18 +335,75 @@ def test_fake_pipeline(tmp_path: Path) -> None:
         ),
     )
 
-    weights = result.optimization_input["weights"]
+    assert len(successful_results) == 1
+
+    result = successful_results[0]
+    final_round = result.rounds[-1]
+    assert final_round.optimization_input is not None
+    weights = final_round.optimization_input["weights"]
 
     assert weights["seeker_1"]["candidate_1"] == 1
     assert weights["seeker_1"]["candidate_2"] == 0
 
     assert (result.run_directory / "inputs.json").exists()
-    assert (result.run_directory / "orchestrator_output.json").exists()
-    assert (result.run_directory / "optimization_input.json").exists()
-    assert (result.run_directory / "decision.json").exists()
+    assert (result.run_directory / "tone_profiles.json").exists()
+    assert (result.run_directory / "run_summary.json").exists()
+
+    round_directory = result.candidate_directory / "round_01"
+    assert (round_directory / "question_agent_plan_output.json").exists()
+    assert (round_directory / "optimization_input.json").exists()
+    assert (round_directory / "decision.json").exists()
 
     agent_files = list(
-        (result.run_directory / "agent_outputs").glob("*.json")
+        (round_directory / "agent_outputs").glob("*.json")
     )
 
-    assert len(agent_files) == 3
+    # One LLM call/artifact per survey question, not per respondent answer.
+    assert len(agent_files) == 2
+
+    candidate_batch = next(
+        path for path in agent_files
+        if "candidate_categories" in path.name
+    )
+    candidate_artifact = json.loads(
+        candidate_batch.read_text(encoding="utf-8")
+    )
+    assert candidate_artifact["respondent_count"] == 2
+    assert len(candidate_artifact["outputs"]) == 2
+
+    question_agent_requests = [
+        request
+        for request in fake_llm.requests
+        if request.task_id.startswith("direct_orchestration__round_1__")
+    ]
+    assert len(question_agent_requests) == 2
+
+    candidate_request = next(
+        request
+        for request in question_agent_requests
+        if "candidate_categories" in request.task_id
+    )
+    assert "candidate_1" in candidate_request.user_prompt
+    assert "candidate_2" in candidate_request.user_prompt
+    assert "Never score or rank a respondent" in (
+        candidate_request.system_prompt
+    )
+    assert "verbosity" in candidate_request.system_prompt
+    assert "within-person tone calibration" in candidate_request.user_prompt
+    assert "Usually calm and concise." in candidate_request.user_prompt
+    assert "Usually concise and emphatic." in candidate_request.user_prompt
+    assert "I usually describe things calmly." not in candidate_request.user_prompt
+    assert "I tend to use emphatic language." not in candidate_request.user_prompt
+
+    calibration_requests = [
+        request
+        for request in fake_llm.requests
+        if request.task_id == "tone_calibrator"
+    ]
+    assert len(calibration_requests) == 1
+    assert "I usually describe things calmly." in (
+        calibration_requests[0].user_prompt
+    )
+    assert "I tend to use emphatic language." in (
+        calibration_requests[0].user_prompt
+    )

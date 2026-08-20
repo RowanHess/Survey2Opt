@@ -1,9 +1,12 @@
 pyproject.toml
 surveyopt/__init__.py
 surveyopt/aggregation.py
+surveyopt/audit.py
+surveyopt/calibration.py
 surveyopt/json_tasks.py
 surveyopt/llm.py
 surveyopt/matching.py
+surveyopt/meta_orchestration.py
 surveyopt/models.py
 surveyopt/orchestration.py
 surveyopt/pipeline.py
