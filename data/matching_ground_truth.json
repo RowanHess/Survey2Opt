@@ -1,11 +1,14 @@
 {
   "status": "scipy_hungarian",
-  "objective_value": 13.176385000000002,
+  "objective_value": 11.789952,
+  "n_people": 25,
+  "n_houses": 15,
+  "all_houses_matched": true,
   "pairs": [
     {
       "left_id": "person_01",
-      "right_id": "house_20",
-      "weight": 0.707526
+      "right_id": "house_14",
+      "weight": 0.762004
     },
     {
       "left_id": "person_03",
@@ -14,37 +17,37 @@
     },
     {
       "left_id": "person_04",
-      "right_id": "house_18",
+      "right_id": "house_13",
       "weight": 0.746785
     },
     {
       "left_id": "person_05",
-      "right_id": "house_23",
+      "right_id": "house_04",
       "weight": 0.8172
     },
     {
       "left_id": "person_06",
-      "right_id": "house_05",
+      "right_id": "house_03",
       "weight": 0.822321
     },
     {
       "left_id": "person_07",
-      "right_id": "house_03",
+      "right_id": "house_02",
       "weight": 0.826431
     },
     {
       "left_id": "person_08",
-      "right_id": "house_21",
+      "right_id": "house_09",
       "weight": 0.764202
     },
     {
       "left_id": "person_10",
-      "right_id": "house_14",
-      "weight": 0.702967
+      "right_id": "house_08",
+      "weight": 0.78109
     },
     {
       "left_id": "person_11",
-      "right_id": "house_24",
+      "right_id": "house_15",
       "weight": 0.723749
     },
     {
@@ -53,39 +56,58 @@
       "weight": 0.763234
     },
     {
-      "left_id": "person_14",
-      "right_id": "house_04",
-      "weight": 0.777764
-    },
-    {
-      "left_id": "person_15",
-      "right_id": "house_07",
-      "weight": 0.74127
-    },
-    {
       "left_id": "person_18",
-      "right_id": "house_16",
+      "right_id": "house_05",
       "weight": 0.802797
     },
     {
       "left_id": "person_20",
-      "right_id": "house_13",
+      "right_id": "house_01",
       "weight": 0.884302
     },
     {
       "left_id": "person_21",
-      "right_id": "house_08",
+      "right_id": "house_07",
       "weight": 0.779574
     },
     {
       "left_id": "person_22",
-      "right_id": "house_15",
+      "right_id": "house_06",
       "weight": 0.799274
     },
     {
       "left_id": "person_23",
-      "right_id": "house_19",
+      "right_id": "house_12",
       "weight": 0.753109
     }
+  ],
+  "house_id_rename": {
+    "house_13": "house_01",
+    "house_03": "house_02",
+    "house_05": "house_03",
+    "house_23": "house_04",
+    "house_16": "house_05",
+    "house_15": "house_06",
+    "house_08": "house_07",
+    "house_04": "house_08",
+    "house_21": "house_09",
+    "house_10": "house_10",
+    "house_11": "house_11",
+    "house_19": "house_12",
+    "house_18": "house_13",
+    "house_07": "house_14",
+    "house_24": "house_15"
+  },
+  "removed_houses": [
+    "house_01",
+    "house_02",
+    "house_06",
+    "house_09",
+    "house_12",
+    "house_14",
+    "house_17",
+    "house_20",
+    "house_22",
+    "house_25"
   ]
 }
