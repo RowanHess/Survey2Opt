@@ -473,4 +473,4 @@ def serve_run_file(filename: str):
 
 if __name__ == "__main__":
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run(host="127.0.0.1", port=5000, debug=False)
