@@ -89,7 +89,7 @@ person_survey = SurveyDefinition(
                 "Describe your preferred community, culture, and employment environment. "
                 "Include diversity, social activity, newcomer friendliness, local culture, "
                 "industries and occupations you need nearby, remote-work needs, your top "
-                "housing priorities, dealbreakers, and important tradeoffs."
+                "housing priorities and important tradeoffs."
             ),
         ),
     ],

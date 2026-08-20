@@ -187,6 +187,7 @@ You may:
     traits_by_id[entity_id].append(trait)
     matrix = np.asarray(vectors, dtype=float)
     scores = matrix_a @ matrix_b.T
+- try hard to use all data in the question-outputs, although this is not a requirement
 
 Requirements:
 - Define a callable function with this EXACT interface:
