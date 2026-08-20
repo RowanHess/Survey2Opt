@@ -1,0 +1,532 @@
+{
+  "survey_id": "person_survey",
+  "respondent_type": "person",
+  "generator": "natural_prose_renderer",
+  "responses": [
+    {
+      "entity_id": "person_01",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. We do not have pets. I am hybrid, so home still has to function as a workplace some days. I do not want a big relocation; Boston or nearby is the plan.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 3 bedrooms, with a hard minimum of 1. Call it 2 baths and around 1480 square feet. I would consider condo, single family, townhouse, or a multi family. I want 1 reliable parking spot.",
+        "location_and_transportation": "I want a quieter residential or more suburban feel. I like being able to walk to some daily needs, and decent transit nearby would help. I am aiming for roughly 16 miles from downtown Boston. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 11 minutes. I need healthcare access within about 19 minutes. I am not optimizing for school districts.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. I am not looking for a family-centric suburb specifically. Strong remote-work suitability is required. No specific industry cluster is required. My top priorities are having enough bedrooms, having enough bathrooms, and working from home comfortably. My dealbreakers center on having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.884,
+        "intensity": 0.905,
+        "verbosity": 0.381,
+        "formality": 0.441
+      },
+      "tone_label": "direct_strong"
+    },
+    {
+      "entity_id": "person_02",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. Day to day, we do not have pets, and I split time between home and an office. I work as a software engineer. A quiet corner or spare room for work would help a lot. I would rather stay close to where I am now around Boston. Overall I am thinking in terms of a place to rent or buy.",
+        "budget": "On budget, I would feel okay stretching toward about $935,603 to buy, with monthly costs somewhere near $5,930. Staying within these numbers matters more than finding something flashy. Cosmetic updates are fine; I am less excited about structural work. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 3 bedrooms, and I really need at least 3. Roughly 1.5 bathrooms and around 1488 square feet is the sweet spot. I would consider condo, multi family, single family, or a townhouse. Outdoor space is a nice-to-have, not a driver. I do not need a formal office. Ideally I would have about 2 parking spots.",
+        "location_and_transportation": "I would be happiest in a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and decent transit nearby would help. Somewhere around 8 miles from downtown Boston feels about right. Beyond about 30 miles starts to feel too far. I want a calmer street and less constant noise, and privacy from neighbors matters a lot. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Normal Greater Boston winters are fine. I would rather steer clear of flood-prone pockets. Easy access to nature and outdoor recreation is a big plus.",
+        "amenities_and_services": "Groceries within something like 8 minutes would make daily life easier. Healthcare within roughly 11 minutes feels sensible. A park within about 14 minutes would be nice. Restaurants and cultural spots within maybe 17 minutes is plenty. Schools are not really driving my search.",
+        "community_jobs_and_priorities": "I like a mixed, reasonably diverse area, and somewhere that is reasonably welcoming to newcomers. It does not have to be a classic family suburb. I need the place to work really well for remote days. I am not locked to one industry geography. If I rank what matters most having enough bedrooms, how urban the area feels, and overall space. If I had to name what would be hardest to compromise on, it is having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.424,
+        "intensity": 0.487,
+        "verbosity": 0.826,
+        "formality": 0.75
+      },
+      "tone_label": "neutral_moderate"
+    },
+    {
+      "entity_id": "person_03",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and one child. Day to day, we have a dog and a cat, and I usually go into work on site. I work as a public school teacher. I can move within Greater Boston if the home is right. Overall I am thinking in terms of a place to buy.",
+        "budget": "On budget, I would feel okay stretching toward about $1.09 million to buy, with monthly costs somewhere near $6,373. Staying within these numbers matters more than finding something flashy. I can live with a place that needs work if the price is right. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 3 bedrooms, and I really need at least 2. Roughly 1.5 bathrooms and around 1579 square feet is the sweet spot. I would consider condo, single family, townhouse, or a multi family. A yard, patio, or other outdoor space would make a real difference. I do not need a formal office. Ideally I would have about 1 parking spot.",
+        "location_and_transportation": "I would be happiest in a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and good T / transit access really matters. Somewhere around 12 miles from downtown Boston feels about right. I prefer things not too loud, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Normal Greater Boston winters are fine. I would rather steer clear of flood-prone pockets. Easy access to nature and outdoor recreation is a big plus.",
+        "amenities_and_services": "Groceries within something like 9 minutes would make daily life easier. Healthcare within roughly 12 minutes feels sensible. A park within about 14 minutes would be nice. Restaurants and cultural spots within maybe 12 minutes is plenty. Strong schools are one of my main reasons for choosing a neighborhood.",
+        "community_jobs_and_priorities": "I like a clearly diverse community, and a neighborhood that feels open to newcomers. A family-friendly vibe would help. Local job density matters more than a home office setup. It would help to be near opportunities in areas like biotech. If I rank what matters most having enough bedrooms, school quality, and having enough bathrooms. If I had to name what would be hardest to compromise on, it is having enough bedrooms and having enough bathrooms."
+      },
+      "tone": {
+        "assertiveness": 0.184,
+        "intensity": 0.162,
+        "verbosity": 0.707,
+        "formality": 0.605
+      },
+      "tone_label": "soft_mild"
+    },
+    {
+      "entity_id": "person_04",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live on my own right now. Day to day, we have a dog and a cat, and I work on site, so the commute and parking matter more than a home office. I work as a biotech research associate. I will move within Greater Boston for the right place. Overall I am thinking in terms of a place to buy.",
+        "budget": "I need to stay at or under roughly $1.43 million purchase price and about $8,901 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. A heavy renovation is off the table. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 2 bedrooms, with a hard minimum of 1. Call it 1 baths and around 1365 square feet. I would consider multi family, single family, or a townhouse. I need usable outdoor space. Skip the office; I would rather use the square footage elsewhere. I want 1 reliable parking spot.",
+        "location_and_transportation": "I want a lively, denser urban setting. I want errands and cafes within an easy walk, and good T / transit access really matters. I am aiming for roughly 4 miles from downtown Boston. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I would rather not depend on a car for everything.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Heavy snow exposure is a problem for me. Meaningful flood risk is a dealbreaker. I need strong access to nature nearby.",
+        "amenities_and_services": "I want a grocery store within about 6 minutes. I need healthcare access within about 18 minutes. Parks should be within about 15 minutes. I want restaurants / culture within about 21 minutes. I am not optimizing for school districts.",
+        "community_jobs_and_priorities": "I want a clearly diverse community, and somewhere that is reasonably welcoming to newcomers. I am not looking for a family-centric suburb specifically. I care more about local employment options than remote-work perks. I need proximity to work in fields like logistics. My top priorities are having enough bedrooms, outdoor space, and keeping noise down. My dealbreakers center on having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.759,
+        "intensity": 0.231,
+        "verbosity": 0.79,
+        "formality": 0.818
+      },
+      "tone_label": "direct_mild"
+    },
+    {
+      "entity_id": "person_05",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and one child. Day to day, we do not have pets, and I split time between home and an office. I work as a electrician. I would rather stay close to where I am now around Cambridge. Overall I am thinking in terms of a place to buy.",
+        "budget": "On budget, I would feel okay stretching toward about $1.57 million to buy, with monthly costs somewhere near $9,284. Staying within these numbers matters more than finding something flashy. I can live with a place that needs work if the price is right. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 3 bedrooms, and I really need at least 3. Roughly 2.5 bathrooms and around 1411 square feet is the sweet spot. I would consider multi family, single family, or a townhouse. Outdoor space is a nice-to-have, not a driver. I do not need a formal office. Ideally I would have about 2 parking spots.",
+        "location_and_transportation": "I would be happiest in a lively, denser urban setting. I want errands and cafes within an easy walk, and decent transit nearby would help. Somewhere around 13 miles from downtown Boston feels about right. I prefer things not too loud, and privacy from neighbors matters a lot. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I would rather avoid the snowiest, most exposed spots if I can. I would rather steer clear of flood-prone pockets. I like having some green space or trails within reach.",
+        "amenities_and_services": "Groceries within something like 14 minutes would make daily life easier. Healthcare within roughly 16 minutes feels sensible. A park within about 6 minutes would be nice. Restaurants and cultural spots within maybe 19 minutes is plenty. Solid local schools are an important part of the decision.",
+        "community_jobs_and_priorities": "I like a clearly diverse community, and somewhere that is reasonably welcoming to newcomers. A family-friendly vibe would help. I need the place to work really well for remote days. It would help to be near opportunities in areas like hospitality. If I rank what matters most having enough bedrooms, access to the T / transit, and school quality. If I had to name what would be hardest to compromise on, it is having enough bedrooms and school quality."
+      },
+      "tone": {
+        "assertiveness": 0.434,
+        "intensity": 0.254,
+        "verbosity": 0.827,
+        "formality": 0.749
+      },
+      "tone_label": "neutral_mild"
+    },
+    {
+      "entity_id": "person_06",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and 2 children. Day to day, we do not have pets, and I work on site, so the commute and parking matter more than a home office. I work as a social worker. I will move within Greater Boston for the right place. Overall I am thinking in terms of a place to rent or buy.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 4 bedrooms, with a hard minimum of 3. Call it 2.5 baths and around 1903 square feet. I would consider condo, single family, townhouse, or a multi family. I do not need outdoor space. Skip the office; I would rather use the square footage elsewhere. I want 1 reliable parking spot.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and good T / transit access really matters. I am aiming for roughly 17 miles from downtown Boston. I want a calmer street and less constant noise, and privacy from neighbors matters a lot. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Heavy snow exposure is a problem for me. Meaningful flood risk is a dealbreaker. I need strong access to nature nearby.",
+        "amenities_and_services": "I want a grocery store within about 10 minutes. I need healthcare access within about 12 minutes. Parks should be within about 8 minutes. I want restaurants / culture within about 9 minutes. School quality has to be clearly solid.",
+        "community_jobs_and_priorities": "I want a clearly diverse community, and somewhere that is reasonably welcoming to newcomers. The area should feel family-oriented. I care more about local employment options than remote-work perks. I need proximity to work in fields like government, tech. My top priorities are having enough bedrooms, school quality, and having enough bathrooms. My dealbreakers center on having enough bedrooms and school quality."
+      },
+      "tone": {
+        "assertiveness": 0.633,
+        "intensity": 0.96,
+        "verbosity": 0.768,
+        "formality": 0.423
+      },
+      "tone_label": "neutral_strong"
+    },
+    {
+      "entity_id": "person_07",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and one child. Day to day, we do not have pets, and I work on site, so the commute and parking matter more than a home office. I work as a financial analyst. I will move within Greater Boston for the right place. Overall I am thinking in terms of a place to rent.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 3 bedrooms, with a hard minimum of 2. Call it 1.5 baths and around 1675 square feet. I would consider condo, single family, townhouse, or a multi family. I do not need outdoor space. Skip the office; I would rather use the square footage elsewhere. I want 2 reliable parking spots.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and good T / transit access really matters. I am aiming for roughly 2 miles from downtown Boston. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 13 minutes. I need healthcare access within about 9 minutes. Parks should be within about 11 minutes. I want restaurants / culture within about 9 minutes. I will only look where school quality is clearly strong.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. The area should feel family-oriented. I care more about local employment options than remote-work perks. I need proximity to work in fields like healthcare. My top priorities are having enough bedrooms, school quality, and being able to walk to daily needs. My dealbreakers center on having enough bedrooms and school quality."
+      },
+      "tone": {
+        "assertiveness": 0.623,
+        "intensity": 0.96,
+        "verbosity": 0.869,
+        "formality": 0.451
+      },
+      "tone_label": "neutral_strong"
+    },
+    {
+      "entity_id": "person_08",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and 3 children. Day to day, we do not have pets, and I am hybrid, so home still has to function as a workplace some days. I work as a restaurant manager. I will move within Greater Boston for the right place. Overall I am thinking in terms of a place to rent or buy.",
+        "budget": "I need to stay at or under roughly $1.32 million purchase price and about $7,230 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 5 bedrooms, with a hard minimum of 4. Call it 1.5 baths and around 1973 square feet. I would consider condo, single family, townhouse, or a multi family. Outdoor space is preferred, not optional if I can help it. Skip the office; I would rather use the square footage elsewhere. I want 1 reliable parking spot.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and decent transit nearby would help. I am aiming for roughly 9 miles from downtown Boston. I prefer things not too loud, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 14 minutes. I need healthcare access within about 18 minutes. Parks should be within about 10 minutes. I want restaurants / culture within about 15 minutes. School quality has to be clearly solid.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. The area should feel family-oriented. Strong remote-work suitability is required. No specific industry cluster is required. My top priorities are having enough bedrooms, school quality, and working from home comfortably. My dealbreakers center on having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.854,
+        "intensity": 0.191,
+        "verbosity": 0.923,
+        "formality": 0.777
+      },
+      "tone_label": "direct_mild"
+    },
+    {
+      "entity_id": "person_09",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and 2 children. Day to day, we do not have pets, and I am hybrid, so home still has to function as a workplace some days. I work as a physical therapist. I need a real work room, not just the kitchen table. Neighborhood is secondary; Greater Boston is fine if the house fits. Overall I am thinking in terms of a place to buy.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 6 bedrooms, with a hard minimum of 3. Call it 2.5 baths and around 2528 square feet. I would consider condo, single family, townhouse, or a multi family. I do not need outdoor space. Skip the office; I would rather use the square footage elsewhere. I want 2 reliable parking spots.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and decent transit nearby would help. I am aiming for roughly 17 miles from downtown Boston. I want a calmer street and less constant noise, and privacy from neighbors matters a lot. I expect to rely on a car day to day.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 7 minutes. I need healthcare access within about 14 minutes. Parks should be within about 7 minutes. I want restaurants / culture within about 14 minutes. School quality has to be clearly solid.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and somewhere that is reasonably welcoming to newcomers. The area should feel family-oriented. Strong remote-work suitability is required. No specific industry cluster is required. My top priorities are having enough bedrooms, school quality, and working from home comfortably. My dealbreakers center on having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.978,
+        "intensity": 0.775,
+        "verbosity": 0.763,
+        "formality": 0.336
+      },
+      "tone_label": "direct_strong"
+    },
+    {
+      "entity_id": "person_10",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with one child. We do not have pets. I work remotely and need the house to support that. I do not want a big relocation; Medford or nearby is the plan.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 3 bedrooms, with a hard minimum of 1. Call it 1.5 baths and around 1411 square feet. I would consider condo, single family, townhouse, or a multi family. I want 2 reliable parking spots.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and decent transit nearby would help. I am aiming for roughly 17 miles from downtown Boston. I want a calmer street and less constant noise, and privacy from neighbors matters a lot. I would rather not depend on a car for everything.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I need strong access to nature nearby.",
+        "amenities_and_services": "I want a grocery store within about 13 minutes. I need healthcare access within about 11 minutes. I will only look where school quality is clearly strong.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and somewhere that is reasonably welcoming to newcomers. The area should feel family-oriented. Strong remote-work suitability is required. I need proximity to work in fields like trades. My top priorities are having enough bedrooms, school quality, and avoiding flood risk. My dealbreakers center on having enough bedrooms, school quality, and avoiding flood risk."
+      },
+      "tone": {
+        "assertiveness": 0.677,
+        "intensity": 0.702,
+        "verbosity": 0.456,
+        "formality": 0.82
+      },
+      "tone_label": "direct_strong"
+    },
+    {
+      "entity_id": "person_11",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. We do not have pets. I mostly work from home. A quiet corner or spare room for work would help a lot. I would rather stay close to where I am now around Malden.",
+        "budget": "On budget, I would feel okay stretching toward about $1.09 million to buy, with monthly costs somewhere near $6,373. Staying within these numbers matters more than finding something flashy. I can live with a place that needs work if the price is right. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 3 bedrooms, and I really need at least 2. Roughly 2.5 bathrooms and around 1625 square feet is the sweet spot. I would consider condo, single family, townhouse, or a multi family. I can manage without a dedicated parking spot if transit is good.",
+        "location_and_transportation": "I would be happiest in a lively, denser urban setting. I want errands and cafes within an easy walk, and strong transit is not essential. Somewhere around 18 miles from downtown Boston feels about right. I want a calmer street and less constant noise, and privacy from neighbors matters a lot. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Normal Greater Boston winters are fine. I would rather steer clear of flood-prone pockets. Easy access to nature and outdoor recreation is a big plus.",
+        "amenities_and_services": "Groceries within something like 14 minutes would make daily life easier. Healthcare within roughly 8 minutes feels sensible. Schools are not really driving my search.",
+        "community_jobs_and_priorities": "I like a mixed, reasonably diverse area, and somewhere that is reasonably welcoming to newcomers. It does not have to be a classic family suburb. I need the place to work really well for remote days. It would help to be near opportunities in areas like tech, healthcare. If I rank what matters most having enough bedrooms, access to the T / transit, and working from home comfortably. If I had to name what would be hardest to compromise on, it is having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.279,
+        "intensity": 0.224,
+        "verbosity": 0.282,
+        "formality": 0.82
+      },
+      "tone_label": "soft_mild"
+    },
+    {
+      "entity_id": "person_12",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. Day to day, we do not have pets, and I usually go into work on site. I work as a product manager. I am pretty flexible on exact neighborhood as long as it is in the Boston area. Overall I am thinking in terms of a place to buy.",
+        "budget": "On budget, I would feel okay stretching toward about $1.07 million to buy, with monthly costs somewhere near $5,809. Staying within these numbers matters more than finding something flashy. I can live with a place that needs work if the price is right. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 2 bedrooms, and I really need at least 2. Roughly 1 bathrooms and around 1278 square feet is the sweet spot. I would consider condo, multi family, single family, or a townhouse. Outdoor space is a nice-to-have, not a driver. I do not need a formal office. Ideally I would have about 2 parking spots.",
+        "location_and_transportation": "I would be happiest in a mixed neighborhood that is not pure downtown. I am fine driving for most errands, and good T / transit access really matters. Somewhere around 16 miles from downtown Boston feels about right. I want a calmer street and less constant noise, and privacy from neighbors matters a lot. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Normal Greater Boston winters are fine. I would rather steer clear of flood-prone pockets. I like having some green space or trails within reach.",
+        "amenities_and_services": "Groceries within something like 9 minutes would make daily life easier. Healthcare within roughly 18 minutes feels sensible. A park within about 15 minutes would be nice. Restaurants and cultural spots within maybe 24 minutes is plenty. Schools are not really driving my search.",
+        "community_jobs_and_priorities": "I like a clearly diverse community, and somewhere that is reasonably welcoming to newcomers. It does not have to be a classic family suburb. Local job density matters more than a home office setup. It would help to be near opportunities in areas like logistics, education. If I rank what matters most having enough bedrooms, easy access / fewer stairs, and avoiding flood risk. If I had to name what would be hardest to compromise on, it is having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.046,
+        "intensity": 0.409,
+        "verbosity": 0.93,
+        "formality": 0.551
+      },
+      "tone_label": "soft_moderate"
+    },
+    {
+      "entity_id": "person_13",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. We do not have pets. I usually go into work on site. I can move within Greater Boston if the home is right.",
+        "budget": "On budget, I would feel okay stretching toward about $1.09 million to buy, with monthly costs somewhere near $6,373. Staying within these numbers matters more than finding something flashy. I can live with a place that needs work if the price is right. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 2 bedrooms, and I really need at least 1. Roughly 1 bathrooms and around 1369 square feet is the sweet spot. I would consider condo, single family, townhouse, or a multi family. Ideally I would have about 1 parking spot.",
+        "location_and_transportation": "I would be happiest in a lively, denser urban setting. I want errands and cafes within an easy walk, and good T / transit access really matters. Somewhere around 14 miles from downtown Boston feels about right. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Normal Greater Boston winters are fine. I would rather steer clear of flood-prone pockets. I like having some green space or trails within reach.",
+        "amenities_and_services": "Groceries within something like 10 minutes would make daily life easier. Healthcare within roughly 12 minutes feels sensible. Schools are not really driving my search.",
+        "community_jobs_and_priorities": "I like a clearly diverse community, and a neighborhood that feels open to newcomers. It does not have to be a classic family suburb. Local job density matters more than a home office setup. It would help to be near opportunities in areas like finance. If I rank what matters most having enough bedrooms, how urban the area feels, and access to the T / transit. If I had to name what would be hardest to compromise on, it is having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.299,
+        "intensity": 0.32,
+        "verbosity": 0.318,
+        "formality": 0.63
+      },
+      "tone_label": "soft_mild"
+    },
+    {
+      "entity_id": "person_14",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. Day to day, we have a dog, and I work on site, so the commute and parking matter more than a home office. I work as a attorney. I do not want a big relocation; Lynn or nearby is the plan. Overall I am thinking in terms of a place to buy.",
+        "budget": "I need to stay at or under roughly $1.25 million purchase price and about $6,860 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. A heavy renovation is off the table. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 2 bedrooms, with a hard minimum of 2. Call it 1 baths and around 1374 square feet. I would consider multi family, single family, or a townhouse. I need usable outdoor space. Skip the office; I would rather use the square footage elsewhere. I want 1 reliable parking spot.",
+        "location_and_transportation": "I want a quieter residential or more suburban feel. I am fine driving for most errands, and good T / transit access really matters. I am aiming for roughly 12 miles from downtown Boston. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 5 minutes. I need healthcare access within about 11 minutes. Parks should be within about 6 minutes. I want restaurants / culture within about 8 minutes. I am not optimizing for school districts.",
+        "community_jobs_and_priorities": "I want a clearly diverse community, and a neighborhood that feels open to newcomers. I am not looking for a family-centric suburb specifically. I care more about local employment options than remote-work perks. I need proximity to work in fields like hospitality, logistics. My top priorities are having enough bedrooms, outdoor space, and easy access / fewer stairs. My dealbreakers center on having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.814,
+        "intensity": 0.615,
+        "verbosity": 0.764,
+        "formality": 0.581
+      },
+      "tone_label": "direct_moderate"
+    },
+    {
+      "entity_id": "person_15",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. Day to day, we have a dog and a cat, and I usually go into work on site. I work as a pharmacy technician. I can move within Greater Boston if the home is right. Overall I am thinking in terms of a place to rent or buy.",
+        "budget": "On budget, I would feel okay stretching toward about $1.09 million to buy, with monthly costs somewhere near $6,370. Staying within these numbers matters more than finding something flashy. I would rather not take on a renovation project. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 3 bedrooms, and I really need at least 2. Roughly 1.5 bathrooms and around 1616 square feet is the sweet spot. I would consider multi family, single family, or a townhouse. A yard, patio, or other outdoor space would make a real difference. I do not need a formal office. I can manage without a dedicated parking spot if transit is good.",
+        "location_and_transportation": "I would be happiest in a mixed neighborhood that is not pure downtown. I am fine driving for most errands, and good T / transit access really matters. Somewhere around 16 miles from downtown Boston feels about right. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I expect to rely on a car day to day.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Normal Greater Boston winters are fine. I would rather steer clear of flood-prone pockets. Easy access to nature and outdoor recreation is a big plus.",
+        "amenities_and_services": "Groceries within something like 11 minutes would make daily life easier. Healthcare within roughly 19 minutes feels sensible. A park within about 7 minutes would be nice. Restaurants and cultural spots within maybe 13 minutes is plenty. Schools are not really driving my search.",
+        "community_jobs_and_priorities": "I like a clearly diverse community, and a neighborhood that feels open to newcomers. It does not have to be a classic family suburb. Local job density matters more than a home office setup. I am not locked to one industry geography. If I rank what matters most having enough bedrooms, having enough bathrooms, and outdoor space. If I had to name what would be hardest to compromise on, it is having enough bedrooms and having enough bathrooms."
+      },
+      "tone": {
+        "assertiveness": 0.318,
+        "intensity": 0.989,
+        "verbosity": 0.634,
+        "formality": 0.239
+      },
+      "tone_label": "soft_strong"
+    },
+    {
+      "entity_id": "person_16",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and 2 children. We have a dog and a cat. I am hybrid, so home still has to function as a workplace some days. I will move within Greater Boston for the right place.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 5 bedrooms, with a hard minimum of 3. Call it 2 baths and around 2042 square feet. I would consider condo, single family, townhouse, or a multi family. I want 1 reliable parking spot.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and decent transit nearby would help. I am aiming for roughly 5 miles from downtown Boston. I want a calmer street and less constant noise, and privacy from neighbors matters a lot. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 11 minutes. I need healthcare access within about 9 minutes. I will only look where school quality is clearly strong.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. The area should feel family-oriented. Strong remote-work suitability is required. I need proximity to work in fields like logistics, tech. My top priorities are having enough bedrooms, being able to walk to daily needs, and school quality. My dealbreakers center on having enough bedrooms, school quality, and having enough bathrooms."
+      },
+      "tone": {
+        "assertiveness": 0.533,
+        "intensity": 0.742,
+        "verbosity": 0.354,
+        "formality": 0.356
+      },
+      "tone_label": "neutral_strong"
+    },
+    {
+      "entity_id": "person_17",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and one child. Day to day, we have a dog and a cat, and I am hybrid, so home still has to function as a workplace some days. I work as a carpenter. I need a real work room, not just the kitchen table. I do not want a big relocation; Weymouth or nearby is the plan. Overall I am thinking in terms of a place to buy.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 5 bedrooms, with a hard minimum of 3. Call it 2 baths and around 2142 square feet. I would consider condo, single family, townhouse, or a multi family. I need usable outdoor space. Skip the office; I would rather use the square footage elsewhere. I want 2 reliable parking spots.",
+        "location_and_transportation": "I want a lively, denser urban setting. I like being able to walk to some daily needs, and decent transit nearby would help. I am aiming for roughly 16 miles from downtown Boston. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I would rather not depend on a car for everything.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 11 minutes. I need healthcare access within about 14 minutes. Parks should be within about 9 minutes. I want restaurants / culture within about 10 minutes. I will only look where school quality is clearly strong.",
+        "community_jobs_and_priorities": "I want a clearly diverse community, and somewhere that is reasonably welcoming to newcomers. The area should feel family-oriented. Strong remote-work suitability is required. No specific industry cluster is required. My top priorities are having enough bedrooms, school quality, and being able to walk to daily needs. My dealbreakers center on having enough bedrooms and school quality."
+      },
+      "tone": {
+        "assertiveness": 0.938,
+        "intensity": 0.809,
+        "verbosity": 0.9,
+        "formality": 0.605
+      },
+      "tone_label": "direct_strong"
+    },
+    {
+      "entity_id": "person_18",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. Day to day, we do not have pets, and I split time between home and an office. I work as a librarian. A quiet corner or spare room for work would help a lot. I would rather stay close to where I am now around Needham. Overall I am thinking in terms of a place to buy.",
+        "budget": "On budget, I would feel okay stretching toward about $1.09 million to buy, with monthly costs somewhere near $6,373. Staying within these numbers matters more than finding something flashy. I can live with a place that needs work if the price is right. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 3 bedrooms, and I really need at least 2. Roughly 2.5 bathrooms and around 1435 square feet is the sweet spot. I would consider condo, single family, townhouse, or a multi family. A yard, patio, or other outdoor space would make a real difference. I do not need a formal office. Ideally I would have about 1 parking spot.",
+        "location_and_transportation": "I would be happiest in a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and decent transit nearby would help. Somewhere around 9 miles from downtown Boston feels about right. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Snow does not bother me much. I would rather steer clear of flood-prone pockets. I like having some green space or trails within reach.",
+        "amenities_and_services": "Groceries within something like 12 minutes would make daily life easier. Healthcare within roughly 18 minutes feels sensible. A park within about 6 minutes would be nice. Restaurants and cultural spots within maybe 21 minutes is plenty. Schools are not really driving my search.",
+        "community_jobs_and_priorities": "I like a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. It does not have to be a classic family suburb. I need the place to work really well for remote days. I am not locked to one industry geography. If I rank what matters most having enough bedrooms, access to the T / transit, and keeping noise down. If I had to name what would be hardest to compromise on, it is having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.132,
+        "intensity": 0.317,
+        "verbosity": 0.695,
+        "formality": 0.201
+      },
+      "tone_label": "soft_mild"
+    },
+    {
+      "entity_id": "person_19",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. Day to day, we have a cat, and I mostly work from home. I work as a emt. A quiet corner or spare room for work would help a lot. I would rather stay close to where I am now around Lexington. Overall I am thinking in terms of a place to rent or buy.",
+        "budget": "On budget, I would feel okay stretching toward about $1.47 million to buy, with monthly costs somewhere near $7,360. Staying within these numbers matters more than finding something flashy. I would rather not take on a renovation project. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 4 bedrooms, and I really need at least 3. Roughly 2.5 bathrooms and around 1850 square feet is the sweet spot. I would consider condo, multi family, single family, or a townhouse. A yard, patio, or other outdoor space would make a real difference. Having a room that can be an office would help a lot. Ideally I would have about 2 parking spots.",
+        "location_and_transportation": "I would be happiest in a quieter residential or more suburban feel. I am fine driving for most errands, and good T / transit access really matters. Somewhere around 17 miles from downtown Boston feels about right. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I would rather not depend on a car for everything.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Normal Greater Boston winters are fine. I am pretty cautious about flood risk and waterfront flood zones. Parks and trails are nice but not why I would choose a house.",
+        "amenities_and_services": "Groceries within something like 5 minutes would make daily life easier. Healthcare within roughly 13 minutes feels sensible. A park within about 11 minutes would be nice. Restaurants and cultural spots within maybe 24 minutes is plenty. Schools are not really driving my search.",
+        "community_jobs_and_priorities": "I like a clearly diverse community, and a neighborhood that feels open to newcomers. It does not have to be a classic family suburb. I need the place to work really well for remote days. It would help to be near opportunities in areas like biotech. If I rank what matters most having enough bedrooms, reliable parking, and working from home comfortably. If I had to name what would be hardest to compromise on, it is having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.355,
+        "intensity": 0.475,
+        "verbosity": 0.76,
+        "formality": 0.347
+      },
+      "tone_label": "neutral_moderate"
+    },
+    {
+      "entity_id": "person_20",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and 2 children. We have a small pet. I am hybrid, so home still has to function as a workplace some days. I need a real work room, not just the kitchen table. Neighborhood is secondary; Greater Boston is fine if the house fits.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,658 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 5 bedrooms, with a hard minimum of 4. Call it 2.5 baths and around 2060 square feet. I would consider condo, single family, townhouse, or a multi family. I want 2 reliable parking spots.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and strong transit is not essential. I am aiming for roughly 9 miles from downtown Boston. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 7 minutes. I need healthcare access within about 11 minutes. I will only look where school quality is clearly strong.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. The area should feel family-oriented. Strong remote-work suitability is required. No specific industry cluster is required. My top priorities are having enough bedrooms, school quality, and avoiding flood risk. My dealbreakers center on having enough bedrooms and avoiding flood risk."
+      },
+      "tone": {
+        "assertiveness": 0.644,
+        "intensity": 0.893,
+        "verbosity": 0.482,
+        "formality": 0.216
+      },
+      "tone_label": "neutral_strong"
+    },
+    {
+      "entity_id": "person_21",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. We do not have pets. I am hybrid, so home still has to function as a workplace some days. I need a real work room, not just the kitchen table. I will move within Greater Boston for the right place.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 4 bedrooms, with a hard minimum of 2. Call it 2.5 baths and around 1945 square feet. I would consider condo, single family, townhouse, or a multi family. I want 1 reliable parking spot.",
+        "location_and_transportation": "I want a lively, denser urban setting. I want errands and cafes within an easy walk, and decent transit nearby would help. I am aiming for roughly 3 miles from downtown Boston. I want a calmer street and less constant noise, and privacy from neighbors matters a lot. I expect to rely on a car day to day.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 15 minutes. I need healthcare access within about 17 minutes. I am not optimizing for school districts.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. I am not looking for a family-centric suburb specifically. Strong remote-work suitability is required. No specific industry cluster is required. My top priorities are having enough bedrooms, working from home comfortably, and being able to walk to daily needs. My dealbreakers center on having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.761,
+        "intensity": 0.921,
+        "verbosity": 0.508,
+        "formality": 0.436
+      },
+      "tone_label": "direct_strong"
+    },
+    {
+      "entity_id": "person_22",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. Day to day, we have a cat, and I am hybrid, so home still has to function as a workplace some days. I work as a warehouse supervisor. I need a real work room, not just the kitchen table. I do not want a big relocation; Watertown or nearby is the plan. Overall I am thinking in terms of a place to rent or buy.",
+        "budget": "I need to stay at or under roughly $1.09 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 4 bedrooms, with a hard minimum of 2. Call it 2.5 baths and around 1927 square feet. I would consider condo, single family, townhouse, or a multi family. Outdoor space is preferred, not optional if I can help it. Skip the office; I would rather use the square footage elsewhere. I want 1 reliable parking spot.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and decent transit nearby would help. I am aiming for roughly 11 miles from downtown Boston. I want a calmer street and less constant noise, and a bit of privacy would be welcome. I expect to rely on a car day to day.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 8 minutes. I need healthcare access within about 14 minutes. Parks should be within about 15 minutes. I want restaurants / culture within about 12 minutes. I am not optimizing for school districts.",
+        "community_jobs_and_priorities": "I want a clearly diverse community, and somewhere that is reasonably welcoming to newcomers. I am not looking for a family-centric suburb specifically. Strong remote-work suitability is required. I need proximity to work in fields like trades, tech. My top priorities are having enough bedrooms, keeping noise down, and working from home comfortably. My dealbreakers center on having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.71,
+        "intensity": 0.117,
+        "verbosity": 0.897,
+        "formality": 0.595
+      },
+      "tone_label": "direct_mild"
+    },
+    {
+      "entity_id": "person_23",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. Day to day, we have a cat, and I usually go into work on site. I work as a community organizer. I would rather stay close to where I am now around Dedham. Overall I am thinking in terms of a place to buy.",
+        "budget": "On budget, I would feel okay stretching toward about $1.09 million to buy, with monthly costs somewhere near $6,373. Staying within these numbers matters more than finding something flashy. I can live with a place that needs work if the price is right. Normal upkeep is fine.",
+        "housing_preferences": "I am hoping for about 3 bedrooms, and I really need at least 1. Roughly 2.5 bathrooms and around 1585 square feet is the sweet spot. I would consider condo, single family, townhouse, or a multi family. A little outdoor space would be nice, but I can compromise. I do not need a formal office. Ideally I would have about 1 parking spot.",
+        "location_and_transportation": "I would be happiest in a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and good T / transit access really matters. Somewhere around 12 miles from downtown Boston feels about right. I prefer things not too loud, and a bit of privacy would be welcome. I am okay driving some of the time.",
+        "climate_and_environment": "I am planning around Greater Boston weather. Normal Greater Boston winters are fine. I would rather steer clear of flood-prone pockets. Easy access to nature and outdoor recreation is a big plus.",
+        "amenities_and_services": "Groceries within something like 14 minutes would make daily life easier. Healthcare within roughly 12 minutes feels sensible. A park within about 12 minutes would be nice. Restaurants and cultural spots within maybe 14 minutes is plenty. Schools are not really driving my search.",
+        "community_jobs_and_priorities": "I like a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. It does not have to be a classic family suburb. Local job density matters more than a home office setup. It would help to be near opportunities in areas like government. If I rank what matters most having enough bedrooms, access to the T / transit, and a diverse community. If I had to name what would be hardest to compromise on, it is having enough bedrooms."
+      },
+      "tone": {
+        "assertiveness": 0.098,
+        "intensity": 0.64,
+        "verbosity": 0.763,
+        "formality": 0.234
+      },
+      "tone_label": "soft_moderate"
+    },
+    {
+      "entity_id": "person_24",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I share a home with my partner and 2 children. Day to day, we have a dog, and I am hybrid, so home still has to function as a workplace some days. I work as a dental hygienist. I need a real work room, not just the kitchen table. I will move within Greater Boston for the right place. Overall I am thinking in terms of a place to rent or buy.",
+        "budget": "I need to stay at or under roughly $1.19 million purchase price and about $6,373 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. I will take on renovation if it gets me a better house for the money. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 5 bedrooms, with a hard minimum of 4. Call it 2 baths and around 2065 square feet. I would consider condo, single family, townhouse, or a multi family. I need usable outdoor space. Skip the office; I would rather use the square footage elsewhere. I want 2 reliable parking spots.",
+        "location_and_transportation": "I want a mixed neighborhood that is not pure downtown. I like being able to walk to some daily needs, and good T / transit access really matters. I am aiming for roughly 17 miles from downtown Boston. I prefer things not too loud, and privacy from neighbors matters a lot. I would rather not depend on a car for everything.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I want reasonable access to parks or natural areas.",
+        "amenities_and_services": "I want a grocery store within about 15 minutes. I need healthcare access within about 16 minutes. Parks should be within about 14 minutes. I want restaurants / culture within about 22 minutes. School quality has to be clearly solid.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and a neighborhood that feels open to newcomers. The area should feel family-oriented. Strong remote-work suitability is required. I need proximity to work in fields like logistics. My top priorities are having enough bedrooms, school quality, and outdoor space. My dealbreakers center on having enough bedrooms and school quality."
+      },
+      "tone": {
+        "assertiveness": 0.736,
+        "intensity": 0.029,
+        "verbosity": 0.628,
+        "formality": 0.818
+      },
+      "tone_label": "direct_mild"
+    },
+    {
+      "entity_id": "person_25",
+      "entity_type": "person",
+      "survey_id": "person_survey",
+      "answers": {
+        "personal_context": "I live with my partner. We do not have pets. I am hybrid, so home still has to function as a workplace some days. I need a real work room, not just the kitchen table. I will move within Greater Boston for the right place.",
+        "budget": "I need to stay at or under roughly $1.14 million purchase price and about $5,498 a month all-in. Affordability is non-negotiable; I will walk away from anything above this range. A heavy renovation is off the table. I can handle normal maintenance, including yard work if needed.",
+        "housing_preferences": "I need 4 bedrooms, with a hard minimum of 3. Call it 2.5 baths and around 1772 square feet. I would consider condo, multi family, single family, or a townhouse. I want 2 reliable parking spots.",
+        "location_and_transportation": "I want a quieter residential or more suburban feel. I like being able to walk to some daily needs, and decent transit nearby would help. I am aiming for roughly 10 miles from downtown Boston. I prefer things not too loud, and a bit of privacy would be welcome. I would rather not depend on a car for everything.",
+        "climate_and_environment": "I am planning around Greater Boston weather. I can deal with typical winter snow. Meaningful flood risk is a dealbreaker. I need strong access to nature nearby.",
+        "amenities_and_services": "I want a grocery store within about 11 minutes. I need healthcare access within about 9 minutes. I am not optimizing for school districts.",
+        "community_jobs_and_priorities": "I want a mixed, reasonably diverse area, and somewhere that is reasonably welcoming to newcomers. I am not looking for a family-centric suburb specifically. Strong remote-work suitability is required. I need proximity to work in fields like healthcare. My top priorities are having enough bedrooms, avoiding flood risk, and a diverse community. My dealbreakers center on having enough bedrooms and avoiding flood risk."
+      },
+      "tone": {
+        "assertiveness": 0.717,
+        "intensity": 0.09,
+        "verbosity": 0.421,
+        "formality": 0.48
+      },
+      "tone_label": "direct_mild"
+    }
+  ]
+}

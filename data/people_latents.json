@@ -1,0 +1,5502 @@
+{
+  "seed": 20260418,
+  "people": [
+    {
+      "person_id": "person_01",
+      "source_uuid": "fallback-20260418-01",
+      "persona_ref": {
+        "city": "Boston",
+        "zipcode": "02118",
+        "sex": "Male",
+        "age": 24,
+        "marital_status": "Never married",
+        "education_level": "High school diploma",
+        "occupation": "registered nurse",
+        "cultural_background": "Irish American New England background"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "none",
+        "work_arrangement": "hybrid",
+        "needs_office": false,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.391
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "lower"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.329,
+          "importance": 0.512,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.443,
+          "importance": 0.447,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.397,
+          "importance": 0.64,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.451,
+          "importance": 0.34,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.111,
+          "importance": 0.59,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.38,
+          "importance": 0.569,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 16.237,
+          "importance": 0.315,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.0,
+          "importance": 0.835,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1480.0,
+          "importance": 0.565,
+          "hard_min": 1130.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.439,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.651,
+          "importance": 0.306,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.484,
+          "importance": 0.684,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 11.157,
+          "importance": 0.347,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 18.646,
+          "importance": 0.481,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.269,
+          "importance": 0.07,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 14.677,
+          "importance": 0.274,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 18.488,
+          "importance": 0.489,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.595,
+          "importance": 0.487,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.056,
+          "importance": 0.446,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.588,
+          "importance": 0.562,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.434,
+          "importance": 0.595,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.838,
+          "importance": 0.401,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.538,
+          "importance": 0.375,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.588,
+          "importance": 0.468,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "bathrooms",
+          "remote_work_suitability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.884,
+        "intensity": 0.905,
+        "verbosity": 0.381,
+        "formality": 0.441
+      },
+      "meta": {
+        "age_for_accessibility": 24
+      }
+    },
+    {
+      "person_id": "person_02",
+      "source_uuid": "fallback-20260418-02",
+      "persona_ref": {
+        "city": "Boston",
+        "zipcode": "02130",
+        "sex": "Male",
+        "age": 25,
+        "marital_status": "Never married",
+        "education_level": "Some college, no degree",
+        "occupation": "software engineer",
+        "cultural_background": "Chinese American family with roots in the Boston area"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "none",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.33
+      },
+      "budget": {
+        "max_list_price_usd": 935603,
+        "max_monthly_cost_usd": 5930,
+        "renovation_tolerance": 0.471,
+        "maintenance_tolerance": 0.721,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.453,
+          "importance": 0.828,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.372,
+          "importance": 0.787,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.527,
+          "importance": 0.683,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.435,
+          "importance": 0.566,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.107,
+          "importance": 0.566,
+          "hard_min": null,
+          "hard_max": 0.85
+        },
+        "privacy": {
+          "target": 0.75,
+          "importance": 0.43,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 7.539,
+          "importance": 0.556,
+          "hard_min": null,
+          "hard_max": 30
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 3.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.5,
+          "importance": 0.792,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1488.0,
+          "importance": 0.823,
+          "hard_min": 1138.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.534,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.734,
+          "importance": 0.246,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.298,
+          "importance": 0.721,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 8.309,
+          "importance": 0.766,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 10.597,
+          "importance": 0.736,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.245,
+          "importance": 0.248,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 13.827,
+          "importance": 0.237,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 16.722,
+          "importance": 0.416,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.608,
+          "importance": 0.494,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.067,
+          "importance": 0.527,
+          "hard_min": null,
+          "hard_max": 0.75
+        },
+        "nature_access": {
+          "target": 0.687,
+          "importance": 0.306,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.539,
+          "importance": 0.443,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.423,
+          "importance": 0.603,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.442,
+          "importance": 0.258,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.486,
+          "importance": 0.41,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "urbanicity",
+          "sqft"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "multi_family",
+          "single_family",
+          "townhouse"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.424,
+        "intensity": 0.487,
+        "verbosity": 0.826,
+        "formality": 0.75
+      },
+      "meta": {
+        "age_for_accessibility": 25
+      }
+    },
+    {
+      "person_id": "person_03",
+      "source_uuid": "fallback-20260418-03",
+      "persona_ref": {
+        "city": "Boston",
+        "zipcode": "02127",
+        "sex": "Female",
+        "age": 30,
+        "marital_status": "Married",
+        "education_level": "Associate degree",
+        "occupation": "public school teacher",
+        "cultural_background": "Puerto Rican American raised in Greater Boston"
+      },
+      "household": {
+        "household_size": 3,
+        "has_partner": true,
+        "n_children": 1,
+        "pets": "dog_and_cat",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.582
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.66,
+        "income_class": "middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.466,
+          "importance": 0.758,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.593,
+          "importance": 0.477,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.613,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.405,
+          "importance": 0.692,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.422,
+          "importance": 0.615,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.636,
+          "importance": 0.688,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 12.464,
+          "importance": 0.764,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.5,
+          "importance": 0.899,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1579.0,
+          "importance": 0.401,
+          "hard_min": 1229.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.288,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.7,
+          "importance": 0.85,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.458,
+          "importance": 0.831,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 8.581,
+          "importance": 0.487,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 11.52,
+          "importance": 0.497,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.927,
+          "importance": 0.9,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 14.152,
+          "importance": 0.604,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 12.002,
+          "importance": 0.605,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.365,
+          "importance": 0.102,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.146,
+          "importance": 0.681,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.773,
+          "importance": 0.504,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.745,
+          "importance": 0.298,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.673,
+          "importance": 0.359,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.584,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.437,
+          "importance": 0.355,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "bathrooms"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "bathrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "biotech"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.184,
+        "intensity": 0.162,
+        "verbosity": 0.707,
+        "formality": 0.605
+      },
+      "meta": {
+        "age_for_accessibility": 30
+      }
+    },
+    {
+      "person_id": "person_04",
+      "source_uuid": "fallback-20260418-04",
+      "persona_ref": {
+        "city": "Cambridge",
+        "zipcode": "02139",
+        "sex": "Male",
+        "age": 33,
+        "marital_status": "Divorced",
+        "education_level": "Master's degree",
+        "occupation": "biotech research associate",
+        "cultural_background": "Indian American professional household"
+      },
+      "household": {
+        "household_size": 1,
+        "has_partner": false,
+        "n_children": 0,
+        "pets": "dog_and_cat",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.496
+      },
+      "budget": {
+        "max_list_price_usd": 1432301,
+        "max_monthly_cost_usd": 8901,
+        "renovation_tolerance": 0.224,
+        "maintenance_tolerance": 0.431,
+        "income_class": "upper"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.762,
+          "importance": 0.45,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.7,
+          "importance": 0.575,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.504,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.216,
+          "importance": 0.581,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.102,
+          "importance": 0.817,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.505,
+          "importance": 0.446,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 3.584,
+          "importance": 0.216,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 2.0,
+          "importance": 0.95,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.0,
+          "importance": 0.593,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1365.0,
+          "importance": 0.542,
+          "hard_min": 1015.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.542,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.7,
+          "importance": 0.85,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.242,
+          "importance": 0.227,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 6.155,
+          "importance": 0.648,
+          "hard_min": null,
+          "hard_max": 25
+        },
+        "healthcare_minutes": {
+          "target": 17.845,
+          "importance": 0.44,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.407,
+          "importance": 0.174,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 14.504,
+          "importance": 0.631,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 21.137,
+          "importance": 0.387,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.315,
+          "importance": 0.294,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.159,
+          "importance": 0.494,
+          "hard_min": null,
+          "hard_max": 0.75
+        },
+        "nature_access": {
+          "target": 0.751,
+          "importance": 0.598,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.947,
+          "importance": 0.508,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.507,
+          "importance": 0.698,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.546,
+          "importance": 0.397,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.653,
+          "importance": 0.161,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "outdoor_space",
+          "noise"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "multi_family",
+          "single_family",
+          "townhouse"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "logistics"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.759,
+        "intensity": 0.231,
+        "verbosity": 0.79,
+        "formality": 0.818
+      },
+      "meta": {
+        "age_for_accessibility": 33
+      }
+    },
+    {
+      "person_id": "person_05",
+      "source_uuid": "fallback-20260418-05",
+      "persona_ref": {
+        "city": "Cambridge",
+        "zipcode": "02138",
+        "sex": "Female",
+        "age": 35,
+        "marital_status": "Married",
+        "education_level": "Doctorate or professional degree",
+        "occupation": "electrician",
+        "cultural_background": "African American family long established in Massachusetts"
+      },
+      "household": {
+        "household_size": 3,
+        "has_partner": true,
+        "n_children": 1,
+        "pets": "none",
+        "work_arrangement": "hybrid",
+        "needs_office": false,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.387
+      },
+      "budget": {
+        "max_list_price_usd": 1572524,
+        "max_monthly_cost_usd": 9284,
+        "renovation_tolerance": 0.751,
+        "maintenance_tolerance": 0.669,
+        "income_class": "upper"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.937,
+          "importance": 0.514,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.972,
+          "importance": 0.418,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.669,
+          "importance": 0.918,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.492,
+          "importance": 0.351,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.478,
+          "importance": 0.388,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.732,
+          "importance": 0.482,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 13.449,
+          "importance": 0.593,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 3.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.713,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1411.0,
+          "importance": 0.693,
+          "hard_min": 1061.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.207,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.256,
+          "importance": 0.25,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.489,
+          "importance": 0.537,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 14.087,
+          "importance": 0.427,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 15.781,
+          "importance": 0.376,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.559,
+          "importance": 0.9,
+          "hard_min": 0.45,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 6.284,
+          "importance": 0.465,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 18.661,
+          "importance": 0.31,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.307,
+          "importance": 0.118,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.261,
+          "importance": 0.826,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.386,
+          "importance": 0.484,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.765,
+          "importance": 0.316,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.521,
+          "importance": 0.664,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.84,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.342,
+          "importance": 0.174,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "transit_access",
+          "school_quality"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "school_quality"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "multi_family",
+          "single_family",
+          "townhouse"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "hospitality"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.434,
+        "intensity": 0.254,
+        "verbosity": 0.827,
+        "formality": 0.749
+      },
+      "meta": {
+        "age_for_accessibility": 35
+      }
+    },
+    {
+      "person_id": "person_06",
+      "source_uuid": "fallback-20260418-06",
+      "persona_ref": {
+        "city": "Somerville",
+        "zipcode": "02143",
+        "sex": "Female",
+        "age": 37,
+        "marital_status": "Never married",
+        "education_level": "Some college, no degree",
+        "occupation": "social worker",
+        "cultural_background": "Dominican American community ties in the Boston metro"
+      },
+      "household": {
+        "household_size": 4,
+        "has_partner": true,
+        "n_children": 2,
+        "pets": "none",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.596
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.639,
+          "importance": 0.447,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.58,
+          "importance": 0.567,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.77,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.59,
+          "importance": 0.49,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.166,
+          "importance": 0.553,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.863,
+          "importance": 0.739,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 16.711,
+          "importance": 0.316,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 4.0,
+          "importance": 0.95,
+          "hard_min": 3.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.843,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1903.0,
+          "importance": 0.729,
+          "hard_min": 1553.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.614,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.276,
+          "importance": 0.342,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.464,
+          "importance": 0.663,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 9.6,
+          "importance": 0.579,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 12.237,
+          "importance": 0.632,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.65,
+          "importance": 0.9,
+          "hard_min": 0.45,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 7.639,
+          "importance": 0.539,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 8.621,
+          "importance": 0.332,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.337,
+          "importance": 0.191,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.202,
+          "importance": 0.409,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.819,
+          "importance": 0.36,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.774,
+          "importance": 0.638,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.597,
+          "importance": 0.512,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.64,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.518,
+          "importance": 0.293,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "bathrooms"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "school_quality"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "government",
+          "tech"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.633,
+        "intensity": 0.96,
+        "verbosity": 0.768,
+        "formality": 0.423
+      },
+      "meta": {
+        "age_for_accessibility": 37
+      }
+    },
+    {
+      "person_id": "person_07",
+      "source_uuid": "fallback-20260418-07",
+      "persona_ref": {
+        "city": "Brookline",
+        "zipcode": "02446",
+        "sex": "Female",
+        "age": 40,
+        "marital_status": "Never married",
+        "education_level": "Associate degree",
+        "occupation": "financial analyst",
+        "cultural_background": "Korean American household in the inner suburbs"
+      },
+      "household": {
+        "household_size": 3,
+        "has_partner": true,
+        "n_children": 1,
+        "pets": "none",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "rent",
+        "relocation_flexibility": 0.531
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.812,
+        "maintenance_tolerance": 0.65,
+        "income_class": "middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.553,
+          "importance": 0.749,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.445,
+          "importance": 0.799,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.597,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.502,
+          "importance": 0.547,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.154,
+          "importance": 0.342,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.53,
+          "importance": 0.458,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 2.409,
+          "importance": 0.334,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.5,
+          "importance": 0.575,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1675.0,
+          "importance": 0.482,
+          "hard_min": 1325.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.379,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.562,
+          "importance": 0.355,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.156,
+          "importance": 0.494,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 13.333,
+          "importance": 0.786,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 9.243,
+          "importance": 0.49,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.868,
+          "importance": 0.9,
+          "hard_min": 0.45,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 11.463,
+          "importance": 0.401,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 9.06,
+          "importance": 0.177,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.492,
+          "importance": 0.214,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.196,
+          "importance": 0.472,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.348,
+          "importance": 0.733,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.428,
+          "importance": 0.685,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.863,
+          "importance": 0.301,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.897,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.425,
+          "importance": 0.249,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "walkability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "school_quality"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "healthcare"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.623,
+        "intensity": 0.96,
+        "verbosity": 0.869,
+        "formality": 0.451
+      },
+      "meta": {
+        "age_for_accessibility": 40
+      }
+    },
+    {
+      "person_id": "person_08",
+      "source_uuid": "fallback-20260418-08",
+      "persona_ref": {
+        "city": "Newton",
+        "zipcode": "02458",
+        "sex": "Female",
+        "age": 43,
+        "marital_status": "Never married",
+        "education_level": "Bachelor's degree",
+        "occupation": "restaurant manager",
+        "cultural_background": "Italian American Greater Boston family"
+      },
+      "household": {
+        "household_size": 5,
+        "has_partner": true,
+        "n_children": 3,
+        "pets": "none",
+        "work_arrangement": "hybrid",
+        "needs_office": false,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.415
+      },
+      "budget": {
+        "max_list_price_usd": 1324286,
+        "max_monthly_cost_usd": 7230,
+        "renovation_tolerance": 0.72,
+        "maintenance_tolerance": 0.65,
+        "income_class": "upper"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.513,
+          "importance": 0.345,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.617,
+          "importance": 0.467,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.354,
+          "importance": 0.652,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.367,
+          "importance": 0.52,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.335,
+          "importance": 0.541,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.387,
+          "importance": 0.583,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 9.272,
+          "importance": 0.615,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 5.0,
+          "importance": 0.95,
+          "hard_min": 4.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.5,
+          "importance": 0.769,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1973.0,
+          "importance": 0.721,
+          "hard_min": 1623.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.318,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.359,
+          "importance": 0.465,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.286,
+          "importance": 0.698,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 13.717,
+          "importance": 0.781,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 17.679,
+          "importance": 0.399,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.556,
+          "importance": 0.9,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 10.118,
+          "importance": 0.545,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 14.735,
+          "importance": 0.476,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.38,
+          "importance": 0.297,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.321,
+          "importance": 0.413,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.449,
+          "importance": 0.654,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.45,
+          "importance": 0.382,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.843,
+          "importance": 0.647,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.868,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.651,
+          "importance": 0.254,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "remote_work_suitability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.854,
+        "intensity": 0.191,
+        "verbosity": 0.923,
+        "formality": 0.777
+      },
+      "meta": {
+        "age_for_accessibility": 43
+      }
+    },
+    {
+      "person_id": "person_09",
+      "source_uuid": "fallback-20260418-09",
+      "persona_ref": {
+        "city": "Quincy",
+        "zipcode": "02169",
+        "sex": "Female",
+        "age": 47,
+        "marital_status": "Married",
+        "education_level": "Master's degree",
+        "occupation": "physical therapist",
+        "cultural_background": "White New England background"
+      },
+      "household": {
+        "household_size": 4,
+        "has_partner": true,
+        "n_children": 2,
+        "pets": "none",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.823
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.847,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.405,
+          "importance": 0.424,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.499,
+          "importance": 0.708,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.654,
+          "importance": 0.494,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.695,
+          "importance": 0.294,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.25,
+          "importance": 0.441,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.876,
+          "importance": 0.551,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 17.311,
+          "importance": 0.275,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 6.0,
+          "importance": 0.95,
+          "hard_min": 3.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.577,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 2528.0,
+          "importance": 0.573,
+          "hard_min": 2178.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.383,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.243,
+          "importance": 0.278,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.274,
+          "importance": 0.741,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 7.018,
+          "importance": 0.522,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 14.108,
+          "importance": 0.734,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.566,
+          "importance": 0.9,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 7.49,
+          "importance": 0.508,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 14.487,
+          "importance": 0.557,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.343,
+          "importance": 0.209,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.195,
+          "importance": 0.694,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.624,
+          "importance": 0.662,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.433,
+          "importance": 0.569,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.46,
+          "importance": 0.545,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.885,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.664,
+          "importance": 0.403,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "remote_work_suitability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.978,
+        "intensity": 0.775,
+        "verbosity": 0.763,
+        "formality": 0.336
+      },
+      "meta": {
+        "age_for_accessibility": 47
+      }
+    },
+    {
+      "person_id": "person_10",
+      "source_uuid": "fallback-20260418-10",
+      "persona_ref": {
+        "city": "Medford",
+        "zipcode": "02155",
+        "sex": "Male",
+        "age": 51,
+        "marital_status": "Widowed",
+        "education_level": "Doctorate or professional degree",
+        "occupation": "graduate student",
+        "cultural_background": "Cape Verdean American community connections"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": false,
+        "n_children": 1,
+        "pets": "none",
+        "work_arrangement": "remote",
+        "needs_office": false,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.344
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.473,
+          "importance": 0.829,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.49,
+          "importance": 0.546,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.403,
+          "importance": 0.574,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.246,
+          "importance": 0.551,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.159,
+          "importance": 0.327,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.719,
+          "importance": 0.642,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 16.642,
+          "importance": 0.723,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.5,
+          "importance": 0.604,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1411.0,
+          "importance": 0.695,
+          "hard_min": 1061.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.413,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.293,
+          "importance": 0.681,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.228,
+          "importance": 0.331,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 12.552,
+          "importance": 0.572,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 10.672,
+          "importance": 0.768,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.891,
+          "importance": 0.9,
+          "hard_min": 0.45,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 9.618,
+          "importance": 0.264,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 13.29,
+          "importance": 0.465,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.52,
+          "importance": 0.435,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.122,
+          "importance": 0.867,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.715,
+          "importance": 0.296,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.405,
+          "importance": 0.786,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.668,
+          "importance": 0.591,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.725,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.647,
+          "importance": 0.241,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "flood_risk"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "school_quality",
+          "flood_risk"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "trades"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.677,
+        "intensity": 0.702,
+        "verbosity": 0.456,
+        "formality": 0.82
+      },
+      "meta": {
+        "age_for_accessibility": 51
+      }
+    },
+    {
+      "person_id": "person_11",
+      "source_uuid": "fallback-20260418-11",
+      "persona_ref": {
+        "city": "Malden",
+        "zipcode": "02148",
+        "sex": "Male",
+        "age": 58,
+        "marital_status": "Never married",
+        "education_level": "Some college, no degree",
+        "occupation": "machinist",
+        "cultural_background": "Brazilian American household in the metro area"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "none",
+        "work_arrangement": "remote",
+        "needs_office": true,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.321
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.721,
+          "importance": 0.497,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.71,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.338,
+          "importance": 0.907,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.62,
+          "importance": 0.6,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.2,
+          "importance": 0.698,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.756,
+          "importance": 0.423,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 17.913,
+          "importance": 0.553,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.706,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1625.0,
+          "importance": 0.447,
+          "hard_min": 1275.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 0.0,
+          "importance": 0.565,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.699,
+          "importance": 0.332,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.584,
+          "importance": 0.788,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 14.028,
+          "importance": 0.558,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 8.461,
+          "importance": 0.555,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.561,
+          "importance": 0.276,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 14.188,
+          "importance": 0.392,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 12.979,
+          "importance": 0.391,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.59,
+          "importance": 0.111,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.173,
+          "importance": 0.449,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.749,
+          "importance": 0.56,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.441,
+          "importance": 0.366,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.412,
+          "importance": 0.304,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.357,
+          "importance": 0.35,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.469,
+          "importance": 0.452,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "transit_access",
+          "remote_work_suitability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "tech",
+          "healthcare"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.279,
+        "intensity": 0.224,
+        "verbosity": 0.282,
+        "formality": 0.82
+      },
+      "meta": {
+        "age_for_accessibility": 58
+      }
+    },
+    {
+      "person_id": "person_12",
+      "source_uuid": "fallback-20260418-12",
+      "persona_ref": {
+        "city": "Waltham",
+        "zipcode": "02453",
+        "sex": "Male",
+        "age": 64,
+        "marital_status": "Married",
+        "education_level": "Associate degree",
+        "occupation": "product manager",
+        "cultural_background": "Jewish American Boston-area family"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "none",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.803
+      },
+      "budget": {
+        "max_list_price_usd": 1073223,
+        "max_monthly_cost_usd": 5809,
+        "renovation_tolerance": 0.729,
+        "maintenance_tolerance": 0.51,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.441,
+          "importance": 0.398,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.327,
+          "importance": 0.694,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.717,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.545,
+          "importance": 0.639,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.158,
+          "importance": 0.382,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.859,
+          "importance": 0.54,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 15.681,
+          "importance": 0.596,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 2.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.0,
+          "importance": 0.769,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1278.0,
+          "importance": 0.548,
+          "hard_min": 928.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.242,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.284,
+          "importance": 0.292,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.747,
+          "importance": 0.818,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 8.807,
+          "importance": 0.449,
+          "hard_min": null,
+          "hard_max": 25
+        },
+        "healthcare_minutes": {
+          "target": 17.513,
+          "importance": 0.464,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.29,
+          "importance": 0.123,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 14.989,
+          "importance": 0.24,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 24.087,
+          "importance": 0.331,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.372,
+          "importance": 0.445,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.339,
+          "importance": 0.793,
+          "hard_min": null,
+          "hard_max": 0.75
+        },
+        "nature_access": {
+          "target": 0.354,
+          "importance": 0.32,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.915,
+          "importance": 0.353,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.639,
+          "importance": 0.217,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.222,
+          "importance": 0.214,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.545,
+          "importance": 0.35,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "accessibility",
+          "flood_risk"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "multi_family",
+          "single_family",
+          "townhouse"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "logistics",
+          "education"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.046,
+        "intensity": 0.409,
+        "verbosity": 0.93,
+        "formality": 0.551
+      },
+      "meta": {
+        "age_for_accessibility": 64
+      }
+    },
+    {
+      "person_id": "person_13",
+      "source_uuid": "fallback-20260418-13",
+      "persona_ref": {
+        "city": "Arlington",
+        "zipcode": "02474",
+        "sex": "Male",
+        "age": 69,
+        "marital_status": "Never married",
+        "education_level": "Bachelor's degree",
+        "occupation": "home health aide",
+        "cultural_background": "Vietnamese American family in Massachusetts"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "none",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "rent",
+        "relocation_flexibility": 0.445
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.724,
+        "income_class": "middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.802,
+          "importance": 0.88,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.739,
+          "importance": 0.679,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.879,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.545,
+          "importance": 0.462,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.228,
+          "importance": 0.596,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.41,
+          "importance": 0.691,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 13.834,
+          "importance": 0.615,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 2.0,
+          "importance": 0.95,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.0,
+          "importance": 0.724,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1369.0,
+          "importance": 0.584,
+          "hard_min": 1019.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.603,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.287,
+          "importance": 0.515,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.451,
+          "importance": 0.719,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 9.865,
+          "importance": 0.533,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 11.625,
+          "importance": 0.365,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.289,
+          "importance": 0.326,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 5.428,
+          "importance": 0.436,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 9.115,
+          "importance": 0.248,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.565,
+          "importance": 0.196,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.096,
+          "importance": 0.475,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.609,
+          "importance": 0.255,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.87,
+          "importance": 0.342,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.684,
+          "importance": 0.677,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.207,
+          "importance": 0.194,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.332,
+          "importance": 0.337,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "urbanicity",
+          "transit_access"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "finance"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.299,
+        "intensity": 0.32,
+        "verbosity": 0.318,
+        "formality": 0.63
+      },
+      "meta": {
+        "age_for_accessibility": 69
+      }
+    },
+    {
+      "person_id": "person_14",
+      "source_uuid": "fallback-20260418-14",
+      "persona_ref": {
+        "city": "Lynn",
+        "zipcode": "01901",
+        "sex": "Male",
+        "age": 31,
+        "marital_status": "Married",
+        "education_level": "Master's degree",
+        "occupation": "attorney",
+        "cultural_background": "Mexican American household living in Greater Boston"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "dog",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.204
+      },
+      "budget": {
+        "max_list_price_usd": 1251220,
+        "max_monthly_cost_usd": 6860,
+        "renovation_tolerance": 0.326,
+        "maintenance_tolerance": 0.43,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.269,
+          "importance": 0.731,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.306,
+          "importance": 0.708,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.742,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.449,
+          "importance": 0.521,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.252,
+          "importance": 0.381,
+          "hard_min": null,
+          "hard_max": 0.85
+        },
+        "privacy": {
+          "target": 0.598,
+          "importance": 0.571,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 11.699,
+          "importance": 0.74,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 2.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.0,
+          "importance": 0.662,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1374.0,
+          "importance": 0.544,
+          "hard_min": 1024.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.733,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.7,
+          "importance": 0.85,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.343,
+          "importance": 0.791,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 5.1,
+          "importance": 0.508,
+          "hard_min": null,
+          "hard_max": 25
+        },
+        "healthcare_minutes": {
+          "target": 11.22,
+          "importance": 0.667,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.433,
+          "importance": 0.089,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 6.23,
+          "importance": 0.714,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 8.378,
+          "importance": 0.474,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.489,
+          "importance": 0.441,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.124,
+          "importance": 0.656,
+          "hard_min": null,
+          "hard_max": 0.75
+        },
+        "nature_access": {
+          "target": 0.651,
+          "importance": 0.37,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.671,
+          "importance": 0.65,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.84,
+          "importance": 0.664,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.59,
+          "importance": 0.203,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.482,
+          "importance": 0.137,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "outdoor_space",
+          "accessibility"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "multi_family",
+          "single_family",
+          "townhouse"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "hospitality",
+          "logistics"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.814,
+        "intensity": 0.615,
+        "verbosity": 0.764,
+        "formality": 0.581
+      },
+      "meta": {
+        "age_for_accessibility": 31
+      }
+    },
+    {
+      "person_id": "person_15",
+      "source_uuid": "fallback-20260418-15",
+      "persona_ref": {
+        "city": "Salem",
+        "zipcode": "01970",
+        "sex": "Female",
+        "age": 31,
+        "marital_status": "Married",
+        "education_level": "Doctorate or professional degree",
+        "occupation": "pharmacy technician",
+        "cultural_background": "Nigerian American professional community ties"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "dog_and_cat",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.519
+      },
+      "budget": {
+        "max_list_price_usd": 1090600,
+        "max_monthly_cost_usd": 6370,
+        "renovation_tolerance": 0.348,
+        "maintenance_tolerance": 0.814,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.384,
+          "importance": 0.458,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.278,
+          "importance": 0.631,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.632,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.715,
+          "importance": 0.658,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.107,
+          "importance": 0.762,
+          "hard_min": null,
+          "hard_max": 0.85
+        },
+        "privacy": {
+          "target": 0.411,
+          "importance": 0.754,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 16.341,
+          "importance": 0.23,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 1.5,
+          "importance": 0.856,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1616.0,
+          "importance": 0.45,
+          "hard_min": 1266.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 0.0,
+          "importance": 0.364,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.7,
+          "importance": 0.85,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.344,
+          "importance": 0.534,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 11.423,
+          "importance": 0.704,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 18.746,
+          "importance": 0.521,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.49,
+          "importance": 0.254,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 7.001,
+          "importance": 0.718,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 12.76,
+          "importance": 0.382,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.488,
+          "importance": 0.489,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.146,
+          "importance": 0.568,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.722,
+          "importance": 0.458,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.925,
+          "importance": 0.514,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.782,
+          "importance": 0.487,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.397,
+          "importance": 0.171,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.321,
+          "importance": 0.282,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "bathrooms",
+          "outdoor_space"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "bathrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "multi_family",
+          "single_family",
+          "townhouse"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.318,
+        "intensity": 0.989,
+        "verbosity": 0.634,
+        "formality": 0.239
+      },
+      "meta": {
+        "age_for_accessibility": 31
+      }
+    },
+    {
+      "person_id": "person_16",
+      "source_uuid": "fallback-20260418-16",
+      "persona_ref": {
+        "city": "Framingham",
+        "zipcode": "01702",
+        "sex": "Male",
+        "age": 37,
+        "marital_status": "Never married",
+        "education_level": "Some college, no degree",
+        "occupation": "data analyst",
+        "cultural_background": "Irish American New England background"
+      },
+      "household": {
+        "household_size": 4,
+        "has_partner": true,
+        "n_children": 2,
+        "pets": "dog_and_cat",
+        "work_arrangement": "hybrid",
+        "needs_office": false,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.597
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.789,
+        "income_class": "lower_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.578,
+          "importance": 0.393,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.568,
+          "importance": 0.915,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.404,
+          "importance": 0.644,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.34,
+          "importance": 0.29,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.231,
+          "importance": 0.417,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.851,
+          "importance": 0.344,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 5.401,
+          "importance": 0.205,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 5.0,
+          "importance": 0.95,
+          "hard_min": 3.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.0,
+          "importance": 0.868,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 2042.0,
+          "importance": 0.831,
+          "hard_min": 1692.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.629,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.7,
+          "importance": 0.85,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.318,
+          "importance": 0.767,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 10.927,
+          "importance": 0.425,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 8.916,
+          "importance": 0.775,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.784,
+          "importance": 0.9,
+          "hard_min": 0.45,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 13.386,
+          "importance": 0.317,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 11.459,
+          "importance": 0.56,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.592,
+          "importance": 0.228,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.299,
+          "importance": 0.612,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.636,
+          "importance": 0.55,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.609,
+          "importance": 0.838,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.778,
+          "importance": 0.577,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.554,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.43,
+          "importance": 0.435,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "walkability",
+          "school_quality"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "school_quality",
+          "bathrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "logistics",
+          "tech"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.533,
+        "intensity": 0.742,
+        "verbosity": 0.354,
+        "formality": 0.356
+      },
+      "meta": {
+        "age_for_accessibility": 37
+      }
+    },
+    {
+      "person_id": "person_17",
+      "source_uuid": "fallback-20260418-17",
+      "persona_ref": {
+        "city": "Weymouth",
+        "zipcode": "02188",
+        "sex": "Female",
+        "age": 48,
+        "marital_status": "Married",
+        "education_level": "Associate degree",
+        "occupation": "carpenter",
+        "cultural_background": "Chinese American family with roots in the Boston area"
+      },
+      "household": {
+        "household_size": 3,
+        "has_partner": true,
+        "n_children": 1,
+        "pets": "dog_and_cat",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.394
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "lower_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.697,
+          "importance": 0.482,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.599,
+          "importance": 0.864,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.37,
+          "importance": 0.854,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.274,
+          "importance": 0.65,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.326,
+          "importance": 0.736,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.4,
+          "importance": 0.47,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 16.138,
+          "importance": 0.565,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 5.0,
+          "importance": 0.95,
+          "hard_min": 3.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.0,
+          "importance": 0.624,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 2142.0,
+          "importance": 0.729,
+          "hard_min": 1792.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.598,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.7,
+          "importance": 0.85,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.45,
+          "importance": 0.369,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 10.739,
+          "importance": 0.328,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 14.005,
+          "importance": 0.34,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.938,
+          "importance": 0.9,
+          "hard_min": 0.45,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 8.979,
+          "importance": 0.384,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 10.463,
+          "importance": 0.24,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.504,
+          "importance": 0.361,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.061,
+          "importance": 0.786,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.382,
+          "importance": 0.485,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.921,
+          "importance": 0.443,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.523,
+          "importance": 0.641,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.863,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.602,
+          "importance": 0.19,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "walkability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "school_quality"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.938,
+        "intensity": 0.809,
+        "verbosity": 0.9,
+        "formality": 0.605
+      },
+      "meta": {
+        "age_for_accessibility": 48
+      }
+    },
+    {
+      "person_id": "person_18",
+      "source_uuid": "fallback-20260418-18",
+      "persona_ref": {
+        "city": "Needham",
+        "zipcode": "02492",
+        "sex": "Female",
+        "age": 53,
+        "marital_status": "Never married",
+        "education_level": "Bachelor's degree",
+        "occupation": "librarian",
+        "cultural_background": "Puerto Rican American raised in Greater Boston"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "none",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.274
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.489,
+          "importance": 0.349,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.632,
+          "importance": 0.509,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.471,
+          "importance": 0.895,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.545,
+          "importance": 0.341,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.249,
+          "importance": 0.844,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.623,
+          "importance": 0.522,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 8.705,
+          "importance": 0.232,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.74,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1435.0,
+          "importance": 0.65,
+          "hard_min": 1085.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.823,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.6,
+          "importance": 0.726,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.374,
+          "importance": 0.23,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 12.438,
+          "importance": 0.519,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 18.472,
+          "importance": 0.614,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.354,
+          "importance": 0.177,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 5.737,
+          "importance": 0.409,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 20.936,
+          "importance": 0.223,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.67,
+          "importance": 0.186,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.238,
+          "importance": 0.627,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.564,
+          "importance": 0.405,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.602,
+          "importance": 0.659,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.752,
+          "importance": 0.657,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.213,
+          "importance": 0.183,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.665,
+          "importance": 0.152,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "transit_access",
+          "noise"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.132,
+        "intensity": 0.317,
+        "verbosity": 0.695,
+        "formality": 0.201
+      },
+      "meta": {
+        "age_for_accessibility": 53
+      }
+    },
+    {
+      "person_id": "person_19",
+      "source_uuid": "fallback-20260418-19",
+      "persona_ref": {
+        "city": "Lexington",
+        "zipcode": "02421",
+        "sex": "Female",
+        "age": 60,
+        "marital_status": "Married",
+        "education_level": "Master's degree",
+        "occupation": "EMT",
+        "cultural_background": "Indian American professional household"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "cat",
+        "work_arrangement": "remote",
+        "needs_office": true,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.257
+      },
+      "budget": {
+        "max_list_price_usd": 1470377,
+        "max_monthly_cost_usd": 7360,
+        "renovation_tolerance": 0.206,
+        "maintenance_tolerance": 0.416,
+        "income_class": "upper"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.283,
+          "importance": 0.677,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.334,
+          "importance": 0.661,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.72,
+          "importance": 0.569,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.204,
+          "importance": 0.51,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.136,
+          "importance": 0.503,
+          "hard_min": null,
+          "hard_max": 0.85
+        },
+        "privacy": {
+          "target": 0.608,
+          "importance": 0.609,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 16.517,
+          "importance": 0.631,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 4.0,
+          "importance": 0.95,
+          "hard_min": 3.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.589,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1850.0,
+          "importance": 0.432,
+          "hard_min": 1500.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.828,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.673,
+          "importance": 0.747,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.605,
+          "importance": 0.449,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 5.348,
+          "importance": 0.604,
+          "hard_min": null,
+          "hard_max": 25
+        },
+        "healthcare_minutes": {
+          "target": 13.089,
+          "importance": 0.532,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.578,
+          "importance": 0.072,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 10.952,
+          "importance": 0.689,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 24.216,
+          "importance": 0.448,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.474,
+          "importance": 0.466,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.317,
+          "importance": 0.655,
+          "hard_min": null,
+          "hard_max": 0.6
+        },
+        "nature_access": {
+          "target": 0.326,
+          "importance": 0.374,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.941,
+          "importance": 0.747,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.863,
+          "importance": 0.398,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.457,
+          "importance": 0.293,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.367,
+          "importance": 0.338,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "parking_spots",
+          "remote_work_suitability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "multi_family",
+          "single_family",
+          "townhouse"
+        ],
+        "required_office_room": true,
+        "required_industries_any": [
+          "biotech"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.355,
+        "intensity": 0.475,
+        "verbosity": 0.76,
+        "formality": 0.347
+      },
+      "meta": {
+        "age_for_accessibility": 60
+      }
+    },
+    {
+      "person_id": "person_20",
+      "source_uuid": "fallback-20260418-20",
+      "persona_ref": {
+        "city": "Revere",
+        "zipcode": "02151",
+        "sex": "Female",
+        "age": 27,
+        "marital_status": "Married",
+        "education_level": "Master's degree",
+        "occupation": "accountant",
+        "cultural_background": "African American family long established in Massachusetts"
+      },
+      "household": {
+        "household_size": 4,
+        "has_partner": true,
+        "n_children": 2,
+        "pets": "other",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.941
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6658,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.618,
+          "importance": 0.588,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.544,
+          "importance": 0.582,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.309,
+          "importance": 0.684,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.513,
+          "importance": 0.394,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.196,
+          "importance": 0.506,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.45,
+          "importance": 0.502,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 8.615,
+          "importance": 0.697,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 5.0,
+          "importance": 0.95,
+          "hard_min": 4.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.504,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 2060.0,
+          "importance": 0.695,
+          "hard_min": 1710.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.468,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.462,
+          "importance": 0.655,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.463,
+          "importance": 0.657,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 7.072,
+          "importance": 0.559,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 11.028,
+          "importance": 0.539,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.713,
+          "importance": 0.9,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 12.348,
+          "importance": 0.436,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 23.755,
+          "importance": 0.384,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.631,
+          "importance": 0.155,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.244,
+          "importance": 0.867,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.467,
+          "importance": 0.503,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.644,
+          "importance": 0.701,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.778,
+          "importance": 0.488,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.784,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.549,
+          "importance": 0.457,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "flood_risk"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "flood_risk"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.644,
+        "intensity": 0.893,
+        "verbosity": 0.482,
+        "formality": 0.216
+      },
+      "meta": {
+        "age_for_accessibility": 27
+      }
+    },
+    {
+      "person_id": "person_21",
+      "source_uuid": "fallback-20260418-21",
+      "persona_ref": {
+        "city": "Chelsea",
+        "zipcode": "02150",
+        "sex": "Male",
+        "age": 40,
+        "marital_status": "Married",
+        "education_level": "Some college, no degree",
+        "occupation": "ux designer",
+        "cultural_background": "Dominican American community ties in the Boston metro"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "none",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.516
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.77,
+          "importance": 0.507,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.675,
+          "importance": 0.752,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.408,
+          "importance": 0.531,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.789,
+          "importance": 0.352,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.277,
+          "importance": 0.525,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.714,
+          "importance": 0.665,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 3.474,
+          "importance": 0.592,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 4.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.523,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1945.0,
+          "importance": 0.406,
+          "hard_min": 1595.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.752,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.307,
+          "importance": 0.248,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.328,
+          "importance": 0.279,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 14.71,
+          "importance": 0.533,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 16.607,
+          "importance": 0.43,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.229,
+          "importance": 0.228,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 9.574,
+          "importance": 0.681,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 17.315,
+          "importance": 0.261,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.42,
+          "importance": 0.26,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.162,
+          "importance": 0.559,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.472,
+          "importance": 0.407,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.499,
+          "importance": 0.403,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.721,
+          "importance": 0.242,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.341,
+          "importance": 0.364,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.329,
+          "importance": 0.419,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "remote_work_suitability",
+          "walkability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": null
+      },
+      "tone": {
+        "assertiveness": 0.761,
+        "intensity": 0.921,
+        "verbosity": 0.508,
+        "formality": 0.436
+      },
+      "meta": {
+        "age_for_accessibility": 40
+      }
+    },
+    {
+      "person_id": "person_22",
+      "source_uuid": "fallback-20260418-22",
+      "persona_ref": {
+        "city": "Watertown",
+        "zipcode": "02472",
+        "sex": "Female",
+        "age": 50,
+        "marital_status": "Never married",
+        "education_level": "Associate degree",
+        "occupation": "warehouse supervisor",
+        "cultural_background": "Korean American household in the inner suburbs"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "cat",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.376
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.748,
+        "maintenance_tolerance": 0.65,
+        "income_class": "lower_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.475,
+          "importance": 0.382,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.494,
+          "importance": 0.575,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.612,
+          "importance": 0.735,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.7,
+          "importance": 0.558,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.329,
+          "importance": 0.819,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.636,
+          "importance": 0.303,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 10.686,
+          "importance": 0.326,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 4.0,
+          "importance": 0.95,
+          "hard_min": 2.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.515,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1927.0,
+          "importance": 0.715,
+          "hard_min": 1577.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.235,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.214,
+          "importance": 0.629,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.346,
+          "importance": 0.682,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 7.685,
+          "importance": 0.31,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 13.581,
+          "importance": 0.791,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.224,
+          "importance": 0.328,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 14.7,
+          "importance": 0.287,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 11.687,
+          "importance": 0.216,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.556,
+          "importance": 0.353,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.186,
+          "importance": 0.626,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.425,
+          "importance": 0.528,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.676,
+          "importance": 0.419,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.502,
+          "importance": 0.645,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.379,
+          "importance": 0.111,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.309,
+          "importance": 0.322,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "noise",
+          "remote_work_suitability"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "trades",
+          "tech"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.71,
+        "intensity": 0.117,
+        "verbosity": 0.897,
+        "formality": 0.595
+      },
+      "meta": {
+        "age_for_accessibility": 50
+      }
+    },
+    {
+      "person_id": "person_23",
+      "source_uuid": "fallback-20260418-23",
+      "persona_ref": {
+        "city": "Dedham",
+        "zipcode": "02026",
+        "sex": "Male",
+        "age": 35,
+        "marital_status": "Widowed",
+        "education_level": "Bachelor's degree",
+        "occupation": "community organizer",
+        "cultural_background": "Italian American Greater Boston family"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "cat",
+        "work_arrangement": "onsite",
+        "needs_office": false,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.391
+      },
+      "budget": {
+        "max_list_price_usd": 1085252,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.376,
+          "importance": 0.656,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.452,
+          "importance": 0.517,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.7,
+          "importance": 0.87,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.556,
+          "importance": 0.379,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.331,
+          "importance": 0.302,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.641,
+          "importance": 0.462,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 11.557,
+          "importance": 0.391,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 3.0,
+          "importance": 0.95,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.604,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1585.0,
+          "importance": 0.454,
+          "hard_min": 1235.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 1.0,
+          "importance": 0.231,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.694,
+          "importance": 0.687,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.179,
+          "importance": 0.68,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 13.612,
+          "importance": 0.758,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 11.75,
+          "importance": 0.629,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.389,
+          "importance": 0.156,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 12.067,
+          "importance": 0.432,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 14.08,
+          "importance": 0.683,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.57,
+          "importance": 0.341,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.179,
+          "importance": 0.756,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.714,
+          "importance": 0.441,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.62,
+          "importance": 0.784,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.708,
+          "importance": 0.302,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.245,
+          "importance": 0.189,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.643,
+          "importance": 0.177,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.8,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "transit_access",
+          "diversity"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "government"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.098,
+        "intensity": 0.64,
+        "verbosity": 0.763,
+        "formality": 0.234
+      },
+      "meta": {
+        "age_for_accessibility": 35
+      }
+    },
+    {
+      "person_id": "person_24",
+      "source_uuid": "fallback-20260418-24",
+      "persona_ref": {
+        "city": "Boston",
+        "zipcode": "02128",
+        "sex": "Female",
+        "age": 46,
+        "marital_status": "Never married",
+        "education_level": "Master's degree",
+        "occupation": "dental hygienist",
+        "cultural_background": "White New England background"
+      },
+      "household": {
+        "household_size": 4,
+        "has_partner": true,
+        "n_children": 2,
+        "pets": "dog",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "rent_or_buy",
+        "relocation_flexibility": 0.478
+      },
+      "budget": {
+        "max_list_price_usd": 1194135,
+        "max_monthly_cost_usd": 6373,
+        "renovation_tolerance": 0.65,
+        "maintenance_tolerance": 0.65,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.411,
+          "importance": 0.336,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.404,
+          "importance": 0.767,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.795,
+          "importance": 0.705,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.247,
+          "importance": 0.454,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.455,
+          "importance": 0.41,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "privacy": {
+          "target": 0.685,
+          "importance": 0.726,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 16.539,
+          "importance": 0.433,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 5.0,
+          "importance": 0.95,
+          "hard_min": 4.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.0,
+          "importance": 0.71,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 2065.0,
+          "importance": 0.736,
+          "hard_min": 1715.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.57,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.7,
+          "importance": 0.85,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.181,
+          "importance": 0.263,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 14.683,
+          "importance": 0.406,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 16.157,
+          "importance": 0.33,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.563,
+          "importance": 0.9,
+          "hard_min": 0.45,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 14.389,
+          "importance": 0.745,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 22.207,
+          "importance": 0.685,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.5,
+          "importance": 0.413,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.337,
+          "importance": 0.846,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "nature_access": {
+          "target": 0.357,
+          "importance": 0.387,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.429,
+          "importance": 0.269,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.841,
+          "importance": 0.205,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.79,
+          "importance": 0.75,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.629,
+          "importance": 0.411,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "school_quality",
+          "outdoor_space"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "school_quality"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "single_family",
+          "townhouse",
+          "multi_family"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "logistics"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.736,
+        "intensity": 0.029,
+        "verbosity": 0.628,
+        "formality": 0.818
+      },
+      "meta": {
+        "age_for_accessibility": 46
+      }
+    },
+    {
+      "person_id": "person_25",
+      "source_uuid": "fallback-20260418-25",
+      "persona_ref": {
+        "city": "Somerville",
+        "zipcode": "02144",
+        "sex": "Male",
+        "age": 55,
+        "marital_status": "Never married",
+        "education_level": "Doctorate or professional degree",
+        "occupation": "bus driver",
+        "cultural_background": "Cape Verdean American community connections"
+      },
+      "household": {
+        "household_size": 2,
+        "has_partner": true,
+        "n_children": 0,
+        "pets": "none",
+        "work_arrangement": "hybrid",
+        "needs_office": true,
+        "tenure_goal": "buy",
+        "relocation_flexibility": 0.673
+      },
+      "budget": {
+        "max_list_price_usd": 1144300,
+        "max_monthly_cost_usd": 5498,
+        "renovation_tolerance": 0.231,
+        "maintenance_tolerance": 0.4,
+        "income_class": "upper_middle"
+      },
+      "preferences": {
+        "urbanicity": {
+          "target": 0.294,
+          "importance": 0.529,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "walkability": {
+          "target": 0.39,
+          "importance": 0.716,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "transit_access": {
+          "target": 0.577,
+          "importance": 0.369,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "car_dependence": {
+          "target": 0.296,
+          "importance": 0.493,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "noise": {
+          "target": 0.485,
+          "importance": 0.428,
+          "hard_min": null,
+          "hard_max": 0.85
+        },
+        "privacy": {
+          "target": 0.646,
+          "importance": 0.719,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "miles_to_downtown_boston": {
+          "target": 10.341,
+          "importance": 0.293,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "bedrooms": {
+          "target": 4.0,
+          "importance": 0.95,
+          "hard_min": 3.0,
+          "hard_max": null
+        },
+        "bathrooms": {
+          "target": 2.5,
+          "importance": 0.8,
+          "hard_min": 1.0,
+          "hard_max": null
+        },
+        "sqft": {
+          "target": 1772.0,
+          "importance": 0.553,
+          "hard_min": 1422.0,
+          "hard_max": null
+        },
+        "parking_spots": {
+          "target": 2.0,
+          "importance": 0.736,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "outdoor_space": {
+          "target": 0.461,
+          "importance": 0.307,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "accessibility": {
+          "target": 0.516,
+          "importance": 0.447,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "grocery_minutes": {
+          "target": 11.013,
+          "importance": 0.5,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "healthcare_minutes": {
+          "target": 9.293,
+          "importance": 0.333,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "school_quality": {
+          "target": 0.535,
+          "importance": 0.342,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "parks_minutes": {
+          "target": 5.206,
+          "importance": 0.733,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "culture_minutes": {
+          "target": 12.707,
+          "importance": 0.314,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "snow_exposure": {
+          "target": 0.542,
+          "importance": 0.199,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "flood_risk": {
+          "target": 0.191,
+          "importance": 0.894,
+          "hard_min": null,
+          "hard_max": 0.75
+        },
+        "nature_access": {
+          "target": 0.715,
+          "importance": 0.565,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "diversity": {
+          "target": 0.56,
+          "importance": 0.836,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "newcomer_friendliness": {
+          "target": 0.555,
+          "importance": 0.314,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "family_orientation": {
+          "target": 0.461,
+          "importance": 0.272,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "remote_work_suitability": {
+          "target": 0.85,
+          "importance": 0.8,
+          "hard_min": null,
+          "hard_max": null
+        },
+        "local_job_density": {
+          "target": 0.44,
+          "importance": 0.173,
+          "hard_min": null,
+          "hard_max": null
+        }
+      },
+      "priorities": {
+        "top_priority_ids": [
+          "bedrooms",
+          "flood_risk",
+          "diversity"
+        ],
+        "dealbreaker_ids": [
+          "bedrooms",
+          "flood_risk"
+        ]
+      },
+      "categorical_constraints": {
+        "allowed_property_types": [
+          "condo",
+          "multi_family",
+          "single_family",
+          "townhouse"
+        ],
+        "required_office_room": null,
+        "required_industries_any": [
+          "healthcare"
+        ]
+      },
+      "tone": {
+        "assertiveness": 0.717,
+        "intensity": 0.09,
+        "verbosity": 0.421,
+        "formality": 0.48
+      },
+      "meta": {
+        "age_for_accessibility": 55
+      }
+    }
+  ]
+}
